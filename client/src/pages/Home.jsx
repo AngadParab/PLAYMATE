@@ -10,7 +10,7 @@ const Home = () => {
 
   // page title
   useEffect(() => {
-    document.title = "Home - SportsBuddy"
+    document.title = "Home - PLAYMEET"
   }, [])
 
   return (

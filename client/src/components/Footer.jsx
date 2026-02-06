@@ -55,14 +55,14 @@ const Footer = () => {
     <footer className="bg-background border-t border-border relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] -z-10" />
-      
+
       <div className="container mx-auto px-4 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Column */}
           <div className="lg:col-span-1 space-y-6">
             <Link to="/" className="inline-flex items-center gap-2 group">
               <span className="text-2xl font-bold font-heading tracking-tight text-foreground group-hover:text-primary transition-colors">
-                SportsBuddy
+                PLAYMEET
               </span>
             </Link>
 
@@ -91,8 +91,8 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                   <Mail className="h-4 w-4" />
                 </div>
-                <a href="mailto:support@sportsbuddy.com" className="hover:text-foreground transition-colors">
-                  support@sportsbuddy.com
+                <a href="mailto:support@playmeet.com" className="hover:text-foreground transition-colors">
+                  support@playmeet.com
                 </a>
               </div>
             </div>
@@ -183,7 +183,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            &copy; {currentYear} SportsBuddy. All rights reserved.
+            &copy; {currentYear} PLAYMEET. All rights reserved.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">

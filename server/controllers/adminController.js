@@ -1,4 +1,4 @@
-import User from "../models/userModel.js";
+﻿import User from "../models/userModel.js";
 import Event from '../models/eventModel.js';
 import asyncHandler from 'express-async-handler';
 import sendEmail from '../config/sendEmail.js';
@@ -55,7 +55,7 @@ export const exportAnalyticsPDF = asyncHandler(async (req, res) => {
 
         // Set response headers for PDF
         res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `attachment; filename="sportsbuddy-analytics-${new Date().toISOString().split('T')[0]}.pdf"`);
+        res.setHeader('Content-Disposition', `attachment; filename="PLAYMEET-analytics-${new Date().toISOString().split('T')[0]}.pdf"`);
         res.setHeader('Cache-Control', 'no-cache');
 
         // Pipe PDF to response
@@ -69,7 +69,7 @@ export const exportAnalyticsPDF = asyncHandler(async (req, res) => {
         doc.fillColor(primaryColor)
             .fontSize(24)
             .font('Helvetica-Bold')
-            .text('SportsBuddy Analytics Report', 50, 50);
+            .text('PLAYMEET Analytics Report', 50, 50);
 
         doc.fillColor(textColor)
             .fontSize(12)
@@ -268,7 +268,7 @@ export const exportAnalyticsPDF = asyncHandler(async (req, res) => {
         doc.fillColor('#6b7280')
             .fontSize(10)
             .font('Helvetica')
-            .text('SportsBuddy Analytics Report - Confidential', 50, pageHeight - 50)
+            .text('PLAYMEET Analytics Report - Confidential', 50, pageHeight - 50)
             .text(`Page 1 of 1`, 450, pageHeight - 50);
 
         // Finalize PDF
@@ -985,10 +985,10 @@ export const approveEvent = asyncHandler(async (req, res) => {
                     from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,
                     to: event.createdBy.email,
                     subject: `Event Approved: ${event.name}`,
-                    message: `Great news! Your event "${event.name}" has been approved and is now live on SportsBuddy.`,
+                    message: `Great news! Your event "${event.name}" has been approved and is now live on PLAYMEET.`,
                     html: AdminSentEmailHtml({
                         subject: `Event Approved: ${event.name}`,
-                        message: `Great news! Your event "${event.name}" has been approved and is now live on SportsBuddy.`
+                        message: `Great news! Your event "${event.name}" has been approved and is now live on PLAYMEET.`
                     }),
                 });
             } catch (emailError) {
@@ -1111,7 +1111,7 @@ export const exportEvents = asyncHandler(async (req, res) => {
             const csvContent = [headers.join(','), ...csvRows.map(row => row.join(','))].join('\n');
 
             res.setHeader('Content-Type', 'text/csv');
-            res.setHeader('Content-Disposition', `attachment; filename="sportsbuddy-events-${new Date().toISOString().split('T')[0]}.csv"`);
+            res.setHeader('Content-Disposition', `attachment; filename="PLAYMEET-events-${new Date().toISOString().split('T')[0]}.csv"`);
             res.send(csvContent);
 
         } else if (format === 'json') {
@@ -1126,7 +1126,7 @@ export const exportEvents = asyncHandler(async (req, res) => {
             }));
 
             res.setHeader('Content-Type', 'application/json');
-            res.setHeader('Content-Disposition', `attachment; filename="sportsbuddy-events-${new Date().toISOString().split('T')[0]}.json"`);
+            res.setHeader('Content-Disposition', `attachment; filename="PLAYMEET-events-${new Date().toISOString().split('T')[0]}.json"`);
             res.json({
                 exportedAt: new Date().toISOString(),
                 totalEvents: events.length,

@@ -6,10 +6,10 @@ const SportsBuddyLoader = ({ message = "Loading..." }) => {
         <div className="relative w-16 h-16">
           {/* Outer Ring */}
           <div className="absolute inset-0 border-4 rounded-full border-zinc-200 dark:border-zinc-800" />
-          
+
           {/* Spinning Accent Ring */}
           <div className="absolute inset-0 border-4 border-transparent rounded-full border-t-blue-600 dark:border-t-blue-500 animate-spin" />
-          
+
           {/* Inner Circle */}
           <div className="absolute inset-2 rounded-full bg-blue-600 dark:bg-blue-500 animate-pulse" />
         </div>
@@ -17,9 +17,9 @@ const SportsBuddyLoader = ({ message = "Loading..." }) => {
         {/* Brand Name */}
         <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
           <h1 className="text-2xl font-semibold mb-2 text-zinc-900 dark:text-white">
-            SportsBuddy
+            PLAYMEET
           </h1>
-          
+
           {/* Loading Message */}
           <div className="flex items-center gap-2 justify-center">
             <p className="text-sm text-zinc-600 dark:text-zinc-400">

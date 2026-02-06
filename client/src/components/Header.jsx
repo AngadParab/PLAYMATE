@@ -180,7 +180,7 @@ const Header = () => {
             <div className="flex-shrink-0 mr-2">
               <Link to="/" className="flex items-center group">
                 <span className="text-2xl font-bold font-serif tracking-tight text-foreground group-hover:text-primary transition-colors">
-                  SportsBuddy
+                  PLAYMEET
                 </span>
               </Link>
             </div>

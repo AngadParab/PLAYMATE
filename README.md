@@ -1,4 +1,4 @@
-# SportsBuddy
+# PLAYMEET
 
 A full-stack sports event management platform built with the MERN stack, enabling users to create, discover, and participate in sports events while connecting with fellow athletes.
 
@@ -6,7 +6,7 @@ A full-stack sports event management platform built with the MERN stack, enablin
 
 ## Project Overview
 
-SportsBuddy is a comprehensive web application that brings together athletes, event organizers, and sports enthusiasts. The platform provides tools for event management, community building, venue discovery, and real-time communication—all with a modern, responsive interface.
+PLAYMEET is a comprehensive web application that brings together athletes, event organizers, and sports enthusiasts. The platform provides tools for event management, community building, venue discovery, and real-time communication—all with a modern, responsive interface.
 
 ---
 

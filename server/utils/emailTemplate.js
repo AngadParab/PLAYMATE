@@ -1,4 +1,4 @@
-const AdminSentEmailHtml = ({ subject, message, buttonText, buttonUrl }) => {
+﻿const AdminSentEmailHtml = ({ subject, message, buttonText, buttonUrl }) => {
     const primaryColor = '#3b82f6'; // primary.dark from your theme
     const backgroundColor = '#f9fafb'; // background.light
     const textColor = '#111827'; // foreground.light
@@ -94,7 +94,7 @@ const AdminSentEmailHtml = ({ subject, message, buttonText, buttonUrl }) => {
             <tr>
                 <td style="padding: 24px 32px; text-align: center; border-bottom: 1px solid #e5e7eb;">
                     <a href="${process.env.CLIENT_URL || 'http://localhost:5173'}" style="text-decoration: none; color: ${primaryColor}; font-size: 28px; font-weight: 700;">
-                        SportsBuddy
+                        PLAYMEET
                     </a>
                 </td>
             </tr>
@@ -117,10 +117,10 @@ const AdminSentEmailHtml = ({ subject, message, buttonText, buttonUrl }) => {
                 <td style="padding: 32px;">
                     <div class="footer">
                         <p>
-                            You received this email because you are a member of SportsBuddy.
+                            You received this email because you are a member of PLAYMEET.
                         </p>
                         <p>
-                            &copy; ${new Date().getFullYear()} SportsBuddy. All rights reserved.
+                            &copy; ${new Date().getFullYear()} PLAYMEET. All rights reserved.
                         </p>
                         <p>
                             123 SportBuddy, Ahmedabad, Gujarat, India
@@ -145,7 +145,7 @@ const welcomeEmailHtml = (name) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to SportsBuddy</title>
+    <title>Welcome to PLAYMEET</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -171,11 +171,11 @@ const welcomeEmailHtml = (name) => {
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to SportsBuddy, ${name}!</h1>
+        <h1>Welcome to PLAYMEET, ${name}!</h1>
         <p>Thank you for joining our community of sports enthusiasts. We are excited to have you on board!</p>
-        <p>At SportsBuddy, we believe in connecting people through sports and activities. Whether you're looking for a partner to play with or want to join local events, we've got you covered.</p>
+        <p>At PLAYMEET, we believe in connecting people through sports and activities. Whether you're looking for a partner to play with or want to join local events, we've got you covered.</p>
         <p>Feel free to explore our platform and start making new connections today!</p>
-        <p>Best regards,<br>The SportsBuddy Team</p>
+        <p>Best regards,<br>The PLAYMEET Team</p>
     </div>
 </body>
 </html>
@@ -198,7 +198,7 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reset Your Password - SportsBuddy</title>
+    <title>Reset Your Password - PLAYMEET</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
         body {
@@ -370,7 +370,7 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
             <tr>
                 <td class="header">
                     <a href="${process.env.CLIENT_URL || 'http://localhost:5173'}" class="logo">
-                        🏆 SportsBuddy
+                        🏆 PLAYMEET
                     </a>
                     <h1>Password Reset Request</h1>
                     <p>We received a request to reset your password</p>
@@ -382,7 +382,7 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
                 <td class="content">
                     <h2>Hello ${name}!</h2>
                     <p>
-                        We received a request to reset your password for your SportsBuddy account. 
+                        We received a request to reset your password for your PLAYMEET account. 
                         To proceed with the password reset, please use the verification code below:
                     </p>
 
@@ -407,7 +407,7 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
                         <h3>🔒 Security Tips</h3>
                         <ul>
                             <li>Never share your verification code with anyone</li>
-                            <li>SportsBuddy will never ask for your password via email</li>
+                            <li>PLAYMEET will never ask for your password via email</li>
                             <li>Create a strong password with letters, numbers, and symbols</li>
                             <li>Use a unique password that you don't use elsewhere</li>
                         </ul>
@@ -415,12 +415,12 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
 
                     <p>
                         If you're having trouble with the password reset process, please contact our 
-                        support team at <a href="mailto:support@sportsbuddy.com">support@sportsbuddy.com</a>.
+                        support team at <a href="mailto:support@PLAYMEET.com">support@PLAYMEET.com</a>.
                     </p>
 
                     <p>
-                        Thanks for being part of the SportsBuddy community!<br>
-                        <strong>The SportsBuddy Team</strong>
+                        Thanks for being part of the PLAYMEET community!<br>
+                        <strong>The PLAYMEET Team</strong>
                     </p>
                 </td>
             </tr>
@@ -429,10 +429,10 @@ const resetPasswordEmailHtml = ({ name, resetCode }) => {
             <tr>
                 <td class="footer">
                     <p>
-                        You received this email because a password reset was requested for your SportsBuddy account.
+                        You received this email because a password reset was requested for your PLAYMEET account.
                     </p>
                     <p>
-                        &copy; ${new Date().getFullYear()} SportsBuddy. All rights reserved.
+                        &copy; ${new Date().getFullYear()} PLAYMEET. All rights reserved.
                     </p>
                     <p>
                         123 SportBuddy, Ahmedabad, Gujarat, India
@@ -463,7 +463,7 @@ const passwordResetSuccessEmailHtml = ({ name }) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Reset Successful - SportsBuddy</title>
+    <title>Password Reset Successful - PLAYMEET</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
         body {
@@ -544,13 +544,13 @@ const passwordResetSuccessEmailHtml = ({ name }) => {
         </div>
         <div class="content">
             <h2>Hello ${name}!</h2>
-            <p>Your password has been successfully reset. You can now log in to your SportsBuddy account with your new password.</p>
+            <p>Your password has been successfully reset. You can now log in to your PLAYMEET account with your new password.</p>
             <p>If you didn't make this change, please contact our support team immediately.</p>
-            <a href="${process.env.CLIENT_URL}/login" class="button">Sign In to SportsBuddy</a>
-            <p>Thanks for being part of the SportsBuddy community!</p>
+            <a href="${process.env.CLIENT_URL}/login" class="button">Sign In to PLAYMEET</a>
+            <p>Thanks for being part of the PLAYMEET community!</p>
         </div>
         <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} SportsBuddy. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} PLAYMEET. All rights reserved.</p>
         </div>
     </div>
 </body>

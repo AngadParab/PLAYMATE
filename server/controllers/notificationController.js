@@ -1,4 +1,4 @@
-import asyncHandler from 'express-async-handler';
+﻿import asyncHandler from 'express-async-handler';
 import Notification from '../models/notificationModel.js';
 import User from '../models/userModel.js';
 import Event from '../models/eventModel.js';
@@ -511,8 +511,8 @@ export const getNotificationTemplates = asyncHandler(async (req, res) => {
         {
             id: 'welcome',
             name: 'Welcome Message',
-            title: 'Welcome to SportsBuddy!',
-            message: 'Welcome to SportsBuddy! We\'re excited to have you join our community of sports enthusiasts.',
+            title: 'Welcome to PLAYMEET!',
+            message: 'Welcome to PLAYMEET! We\'re excited to have you join our community of sports enthusiasts.',
             type: 'system'
         },
         {
@@ -526,7 +526,7 @@ export const getNotificationTemplates = asyncHandler(async (req, res) => {
             id: 'maintenance',
             name: 'Maintenance Notice',
             title: 'Scheduled Maintenance',
-            message: 'SportsBuddy will undergo scheduled maintenance from {{startTime}} to {{endTime}}. We apologize for any inconvenience.',
+            message: 'PLAYMEET will undergo scheduled maintenance from {{startTime}} to {{endTime}}. We apologize for any inconvenience.',
             type: 'system'
         },
         {

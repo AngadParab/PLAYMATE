@@ -129,7 +129,7 @@ function App() {
 
   // Show initial loader while auth is being checked
   if (authLoading) {
-    return <PageLoader message="Initializing SportsBuddy..." />;
+    return <PageLoader message="Initializing PLAYMEET..." />;
   }
 
   return (

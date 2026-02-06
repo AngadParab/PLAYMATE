@@ -1,4 +1,4 @@
-import User from "../models/userModel.js";
+﻿import User from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
 import { uploadImage, deleteImage } from "../config/cloudinary.js";
@@ -50,13 +50,13 @@ export const register = async (req, res) => {
 
     const token = generateToken(newUser);
 
-    res.cookie("SportsBuddyToken", token, cookieOptions);
+    res.cookie("PLAYMEETToken", token, cookieOptions);
 
     // Send welcome email
     // await sendEmail({
-    //   from:`Team SportsBuddy <${process.env.FROM_EMAIL}>`,
+    //   from:`Team PLAYMEET <${process.env.FROM_EMAIL}>`,
     //   to: newUser.email,
-    //   subject: "Welcome to SportsBuddy!",
+    //   subject: "Welcome to PLAYMEET!",
     //   html: welcomeEmailHtml(name),
     // });
 
@@ -115,7 +115,7 @@ export const login = async (req, res) => {
     const token = generateToken(user);
 
     // Set cookie
-    res.cookie("SportsBuddyToken", token, cookieOptions);
+    res.cookie("PLAYMEETToken", token, cookieOptions);
 
     // Success response
     res.status(200).json({
@@ -145,7 +145,7 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
   try {
 
-    res.clearCookie("SportsBuddyToken");
+    res.clearCookie("PLAYMEETToken");
 
     res.status(200).json({
       success: true,
@@ -444,7 +444,7 @@ export const forgotPassword = async (req, res) => {
       await sendEmail({
         from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,
         to: user.email,
-        subject: "Password Reset Code - SportsBuddy",
+        subject: "Password Reset Code - PLAYMEET",
         html: resetPasswordEmailHtml({
           name: user.name,
           resetCode: resetCode
@@ -604,7 +604,7 @@ export const resetPassword = async (req, res) => {
       await sendEmail({
         from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,
         to: user.email,
-        subject: "Password Reset Successful - SportsBuddy",
+        subject: "Password Reset Successful - PLAYMEET",
         html: passwordResetSuccessEmailHtml({
           name: user.name
         }),

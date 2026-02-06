@@ -1,4 +1,4 @@
-import { v2 as cloudinary } from 'cloudinary';
+﻿import { v2 as cloudinary } from 'cloudinary';
 import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import multer from 'multer';
 import dotenv from 'dotenv';
@@ -14,7 +14,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: 'SportsBuddy-2',
+    folder: 'PLAYMEET-2',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
     transformation: [{ width: 500, height: 500, crop: 'limit' }],
     public_id: (req, file) => {
@@ -52,7 +52,7 @@ const uploadImage = async (file, options = {}) => {
   try {
 
    const uploadOptions = {
-      folder: 'SportsBuddy-2',
+      folder: 'PLAYMEET-2',
       ...options,
       transformation: [
         { width: 800, height: 600, crop: 'limit' },

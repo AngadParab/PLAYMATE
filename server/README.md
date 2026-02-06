@@ -1,10 +1,10 @@
-# SportsBuddy Server
+﻿# PLAYMEET Server
 
-**Express.js backend API for the SportsBuddy sports management platform**
+**Express.js backend API for the PLAYMEET sports management platform**
 
 ## Overview
 
-The SportsBuddy server is a robust RESTful API built with Express.js, providing comprehensive backend services for user management, event coordination, venue booking, athlete profiles, community features, and real-time communication.
+The PLAYMEET server is a robust RESTful API built with Express.js, providing comprehensive backend services for user management, event coordination, venue booking, athlete profiles, community features, and real-time communication.
 
 ## Technology Stack
 

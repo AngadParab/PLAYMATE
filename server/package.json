@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
@@ -14,7 +14,7 @@
   ],
   "author": "Prince Kumar",
   "license": "MIT",
-  "description": "SportsBuddy Backend Server",
+  "description": "PLAYMEET Backend Server",
   "dependencies": {
     "@upstash/ratelimit": "^2.0.7",
     "@upstash/redis": "^1.35.6",
@@ -44,3 +44,4 @@
     "nodemon": "^3.1.10"
   }
 }
+

@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+﻿import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
 function getAuthToken(req) {
@@ -6,8 +6,8 @@ function getAuthToken(req) {
   if (auth && auth.startsWith('Bearer ')) {
     return auth.split(' ')[1];
   }
-  if (req.cookies?.SportsBuddyToken) {
-    return req.cookies.SportsBuddyToken;
+  if (req.cookies?.PLAYMEETToken) {
+    return req.cookies.PLAYMEETToken;
   }
   return null;
 }
