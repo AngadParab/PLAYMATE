@@ -1,23 +1,23 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// Default metadata for SportsBuddy
+// Default metadata for PLAYMEET
 const DEFAULT_META = {
-  title: 'SportsBuddy - Connect with Athletes and Sports Events',
-  description: 'Plan, discover, and manage sports events with SportsBuddy. Connect athletes, venues, and teams effortlessly.',
+  title: 'PLAYMEET - Connect with Athletes and Sports Events',
+  description: 'Plan, discover, and manage sports events with PLAYMEET. Connect athletes, venues, and teams effortlessly.',
   image: 'https://sports-buddy2.vercel.app/og-home.png',
   url: window.location.origin,
   type: 'website',
-  siteName: 'SportsBuddy',
+  siteName: 'PLAYMEET',
   locale: 'en_US',
-  keywords: 'sportsbuddy, sports events, athlete network, event management, team finder, tournaments'
+  keywords: 'playmeet, sports events, athlete network, event management, team finder, tournaments'
 };
 
 // Page-specific metadata configurations
 const PAGE_META = {
   '/': {
-    title: 'SportsBuddy - Connect with Athletes and Sports Events',
-    description: 'Plan, discover, and manage sports events with SportsBuddy. Connect athletes, venues, and teams effortlessly.',
+    title: 'PLAYMEET - Connect with Athletes and Sports Events',
+    description: 'Plan, discover, and manage sports events with PLAYMEET. Connect athletes, venues, and teams effortlessly.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/events': {
@@ -40,44 +40,44 @@ const PAGE_META = {
   },
   '/leaderboard': {
     title: 'Leaderboard - Top Performers & Champions',
-    description: 'View the top performers and champions in SportsBuddy. Compete, achieve, and climb the ranks.',
+    description: 'View the top performers and champions in PLAYMEET. Compete, achieve, and climb the ranks.',
     image: 'https://sports-buddy2.vercel.app/og-leaderboard.png',
     keywords: 'leaderboard, rankings, champions, top performers, sports achievements'
   },
   '/community': {
     title: 'Sports Community - Connect with Fellow Athletes',
-    description: 'Join the SportsBuddy community. Share experiences, find teammates, and connect with sports enthusiasts worldwide.',
+    description: 'Join the PLAYMEET community. Share experiences, find teammates, and connect with sports enthusiasts worldwide.',
     image: 'https://sports-buddy2.vercel.app/og-home.png',
     keywords: 'sports community, athletes network, sports discussions, teammates'
   },
   '/login': {
-    title: 'Login - SportsBuddy',
-    description: 'Login to your SportsBuddy account to access events, venues, and connect with athletes.',
+    title: 'Login - PLAYMEET',
+    description: 'Login to your PLAYMEET account to access events, venues, and connect with athletes.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/register': {
-    title: 'Join SportsBuddy - Create Your Account',
-    description: 'Create your SportsBuddy account and start connecting with athletes, discovering events, and booking venues.',
+    title: 'Join PLAYMEET - Create Your Account',
+    description: 'Create your PLAYMEET account and start connecting with athletes, discovering events, and booking venues.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/dashboard': {
-    title: 'Dashboard - SportsBuddy',
-    description: 'Your personal dashboard on SportsBuddy. Manage your events, bookings, and sports activities.',
+    title: 'Dashboard - PLAYMEET',
+    description: 'Your personal dashboard on PLAYMEET. Manage your events, bookings, and sports activities.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/profile': {
-    title: 'My Profile - SportsBuddy',
-    description: 'Manage your SportsBuddy profile, achievements, and sports preferences.',
+    title: 'My Profile - PLAYMEET',
+    description: 'Manage your PLAYMEET profile, achievements, and sports preferences.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/settings': {
-    title: 'Settings - SportsBuddy',
-    description: 'Customize your SportsBuddy experience with personalized settings and preferences.',
+    title: 'Settings - PLAYMEET',
+    description: 'Customize your PLAYMEET experience with personalized settings and preferences.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   },
   '/notifications': {
-    title: 'Notifications - SportsBuddy',
-    description: 'Stay updated with the latest notifications from SportsBuddy events and community.',
+    title: 'Notifications - PLAYMEET',
+    description: 'Stay updated with the latest notifications from PLAYMEET events and community.',
     image: 'https://sports-buddy2.vercel.app/og-home.png'
   }
 };
@@ -95,7 +95,7 @@ const getDynamicMeta = (pathname, data = {}) => {
     const maxParticipants = event.maxParticipants || 'unlimited';
 
     return {
-      title: `${event.name} - Sports Event on SportsBuddy`,
+      title: `${event.name} - Sports Event on PLAYMEET`,
       description: `${event.description} | Date: ${eventDate} | Location: ${event.location?.city || 'TBD'} | Participants: ${participantCount}/${maxParticipants} | Sport: ${event.category}`,
       image,
       url: `${baseUrl}${pathname}`,
@@ -112,7 +112,7 @@ const getDynamicMeta = (pathname, data = {}) => {
     const rating = venue.averageRating || 'Not rated';
 
     return {
-      title: `${venue.name} - Sports Venue on SportsBuddy`,
+      title: `${venue.name} - Sports Venue on PLAYMEET`,
       description: `${venue.description} | Location: ${venue.location?.city}, ${venue.location?.state} | Sports: ${sports} | Rating: ${rating}/5.0 | Capacity: ${venue.capacity || 'N/A'}`,
       image,
       url: `${baseUrl}${pathname}`,
@@ -129,7 +129,7 @@ const getDynamicMeta = (pathname, data = {}) => {
     const achievements = user.achievements?.length || 0;
 
     return {
-      title: `${user.name} - Athlete Profile on SportsBuddy`,
+      title: `${user.name} - Athlete Profile on PLAYMEET`,
       description: `${user.bio || `Sports enthusiast specializing in ${sports}`} | Achievements: ${achievements} | Location: ${user.location?.city || 'N/A'} | Events participated: ${user.stats?.eventsParticipated || 0}`,
       image,
       url: `${baseUrl}${pathname}`,
@@ -144,7 +144,7 @@ const getDynamicMeta = (pathname, data = {}) => {
     const image = community.banner || community.logo || '/https://sports-buddy2.vercel.app/og-home.png';
 
     return {
-      title: `${community.name} - Sports Community on SportsBuddy`,
+      title: `${community.name} - Sports Community on PLAYMEET`,
       description: `${community.description} | Members: ${community.members?.length || 0} | Sport: ${community.sport || 'General sports'}`,
       image,
       url: `${baseUrl}${pathname}`,

@@ -26,30 +26,30 @@ const CallToAction = () => {
 
   if (user) {
     const userActions = [
-      { 
-        icon: Play, 
-        label: 'Host Events', 
+      {
+        icon: Play,
+        label: 'Host Events',
         desc: 'Create and manage sports events',
         path: '/events/create',
         stats: '2.5K+ Created'
       },
-      { 
-        icon: Users, 
-        label: 'Build Teams', 
+      {
+        icon: Users,
+        label: 'Build Teams',
         desc: 'Connect with like-minded athletes',
         path: '/community',
         stats: '8K+ Teams'
       },
-      { 
-        icon: Calendar, 
-        label: 'Track Progress', 
+      {
+        icon: Calendar,
+        label: 'Track Progress',
         desc: 'Monitor your sports journey',
         path: '/dashboard',
         stats: '15K+ Activities'
       },
-      { 
-        icon: Trophy, 
-        label: 'Join Tournaments', 
+      {
+        icon: Trophy,
+        label: 'Join Tournaments',
         desc: 'Compete and win amazing prizes',
         path: '/events?type=tournament',
         stats: '500+ Tournaments'
@@ -71,9 +71,9 @@ const CallToAction = () => {
               <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-6">
                 Ready to Level Up <span className="text-gradient">Your Game?</span>
               </h2>
-              
+
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Create your next event, invite players to join, and build your sports community today. 
+                Create your next event, invite players to join, and build your sports community today.
                 Make every game an adventure worth remembering!
               </p>
             </div>
@@ -131,15 +131,15 @@ const CallToAction = () => {
                       <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                         <action.icon className="w-5 h-5 text-foreground group-hover:text-primary-foreground" />
                       </div>
-                      
+
                       <div className="text-sm font-bold text-foreground mb-1">
                         {action.label}
                       </div>
-                      
+
                       <div className="text-xs text-muted-foreground mb-3 line-clamp-1">
                         {action.desc}
                       </div>
-                      
+
                       <div className="text-xs font-bold text-primary">
                         {action.stats}
                       </div>
@@ -148,10 +148,10 @@ const CallToAction = () => {
                 ))}
               </div>
             </div>
-             {/* Disclaimer at the end of the section */}
-          <div className="text-center mt-12 text-xs text-gray-500 dark:text-gray-400 opacity-80">
-            Disclaimer: All data shown here is for demonstration purposes only and may not reflect real or accurate statistics.
-          </div>
+            {/* Disclaimer at the end of the section */}
+            <div className="text-center mt-12 text-xs text-gray-500 dark:text-gray-400 opacity-80">
+              Disclaimer: All data shown here is for demonstration purposes only and may not reflect real or accurate statistics.
+            </div>
           </div>
         </div>
       </section>
@@ -160,24 +160,24 @@ const CallToAction = () => {
 
   // Non-authenticated user CTA
   const features = [
-    { 
-      icon: Users, 
-      label: 'Find Athletes', 
+    {
+      icon: Users,
+      label: 'Find Athletes',
       desc: 'Connect with local players',
     },
-    { 
-      icon: Calendar, 
-      label: 'Join Events', 
+    {
+      icon: Calendar,
+      label: 'Join Events',
       desc: 'Discover exciting games',
     },
-    { 
-      icon: Trophy, 
-      label: 'Win Prizes', 
+    {
+      icon: Trophy,
+      label: 'Win Prizes',
       desc: 'Compete in tournaments',
     },
-    { 
-      icon: Shield, 
-      label: 'Safe & Secure', 
+    {
+      icon: Shield,
+      label: 'Safe & Secure',
       desc: 'Verified community',
     }
   ]
@@ -206,9 +206,9 @@ const CallToAction = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-8">
               Ready to Find Your <span className="text-gradient">Sports Community?</span>
             </h2>
-            
+
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
-              Join SportsBuddy today and connect with thousands of sports enthusiasts in your area.
+              Join PLAYMEET today and connect with thousands of sports enthusiasts in your area.
             </p>
 
             {/* Stats */}
@@ -236,7 +236,7 @@ const CallToAction = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
-            
+
             <Link to="/events">
               <button className="w-full sm:w-auto px-8 py-4 bg-secondary/20 border border-border hover:bg-secondary text-foreground font-bold rounded-xl transition-colors flex items-center justify-center gap-2">
                 <span>Explore Events</span>
@@ -268,12 +268,12 @@ const CallToAction = () => {
               </div>
               <span className="text-sm font-medium">4.9/5 Rating</span>
             </div>
-            
+
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium">Verified Community</span>
             </div>
-            
+
             <div className="flex items-center gap-2">
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
               <span className="text-sm font-medium">15K+ Happy Users</span>

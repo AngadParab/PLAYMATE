@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
 import {
-  Trophy, ArrowRight, Mail, Phone, MapPin, Heart,
+  Trophy, ArrowRight, Mail, Phone, MapPin,
   Star, Globe, Users, Calendar,
   Zap, Activity, Target,
   Shield
@@ -27,7 +27,7 @@ const Footer = () => {
   ]
 
   const platformLinks = [
-    { label: 'About SportsBuddy', path: '/about', icon: Globe },
+    { label: 'About PLAYMEET', path: '/about', icon: Globe },
     { label: 'How It Works', path: '/how-it-works', icon: Zap },
     { label: 'Success Stories', path: '/stories', icon: Star },
     { label: 'Help Center', path: '/help', icon: Shield },
@@ -192,19 +192,7 @@ const Footer = () => {
             <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
           </div>
 
-          <div className="flex items-center gap-1.5 text-sm text-muted-foreground bg-secondary/50 px-3 py-1.5 rounded-full">
-            <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-red-500 animate-pulse" />
-            <span>by</span>
-            <a
-              href="https://github.com/imprince26"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-foreground hover:text-primary transition-colors"
-            >
-              Prince Patel
-            </a>
-          </div>
+
         </div>
       </div>
     </footer>

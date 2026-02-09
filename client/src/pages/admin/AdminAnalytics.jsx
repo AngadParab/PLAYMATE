@@ -211,7 +211,7 @@ const AdminAnalytics = () => {
 
   // Dynamic page title
   useEffect(() => {
-    document.title = "Analytics - SportsBuddy Admin"
+    document.title = "Analytics - PLAYMEET Admin"
   }, [])
 
   // Animation variants
@@ -251,7 +251,7 @@ const AdminAnalytics = () => {
       const url = URL.createObjectURL(blob)
       const link = document.createElement("a")
       link.href = url
-      link.download = `sportsbuddy-analytics-${new Date().toISOString().split("T")[0]}.pdf`
+      link.download = `playmeet-analytics-${new Date().toISOString().split("T")[0]}.pdf`
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -524,9 +524,8 @@ const AdminAnalytics = () => {
                             <ArrowDownRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-600 flex-shrink-0" />
                           )}
                           <span
-                            className={`text-xs sm:text-sm font-medium ${
-                              metric.changeType === "positive" ? "text-green-600" : "text-red-600"
-                            }`}
+                            className={`text-xs sm:text-sm font-medium ${metric.changeType === "positive" ? "text-green-600" : "text-red-600"
+                              }`}
                           >
                             {metric.change}
                           </span>
@@ -1029,9 +1028,8 @@ const AdminAnalytics = () => {
                                 <ArrowDownRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
                               )}
                               <span
-                                className={`text-xs sm:text-sm font-medium ${
-                                  category.trend === "up" ? "text-green-600" : "text-red-600"
-                                }`}
+                                className={`text-xs sm:text-sm font-medium ${category.trend === "up" ? "text-green-600" : "text-red-600"
+                                  }`}
                               >
                                 {category.change}%
                               </span>

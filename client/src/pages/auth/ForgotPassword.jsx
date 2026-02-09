@@ -166,13 +166,13 @@ const ForgotPassword = () => {
             </CardContent>
           </Card>
 
-          {/* SportsBuddy Branding */}
+          {/* PLAYMEET Branding */}
           <div
             className="text-center mt-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500"
           >
             <div className="flex items-center justify-center space-x-2 mb-2">
               <Trophy className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              <span className="font-bold text-lg text-slate-900 dark:text-slate-50">SportsBuddy</span>
+              <span className="font-bold text-lg text-slate-900 dark:text-slate-50">PLAYMEET</span>
               <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500" />
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -323,13 +323,13 @@ const ForgotPassword = () => {
           </CardContent>
         </Card>
 
-        {/* SportsBuddy Branding */}
+        {/* PLAYMEET Branding */}
         <div
           className="text-center mt-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500"
         >
           <div className="flex items-center justify-center space-x-2 mb-2">
             <Trophy className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            <span className="font-bold text-lg text-slate-900 dark:text-slate-50">SportsBuddy</span>
+            <span className="font-bold text-lg text-slate-900 dark:text-slate-50">PLAYMEET</span>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             Secure password recovery for your sports community

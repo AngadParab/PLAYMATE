@@ -51,7 +51,7 @@ const Contact = () => {
 
   // Page title
   useEffect(() => {
-    document.title = "Contact Us - SportsBuddy"
+    document.title = "Contact Us - PLAYMEET"
   }, [])
 
   // Animation variants
@@ -96,7 +96,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Support",
       description: "Get help via email within 24 hours",
-      contact: "support@sportsbuddy.com",
+      contact: "support@playmeet.com",
       action: "Send Email",
       color: "blue",
       bgGradient: "from-blue-500/20 to-cyan-500/20",
@@ -156,11 +156,11 @@ const Contact = () => {
 
   // Social media links
   const socialLinks = [
-    { icon: Instagram, url: "https://instagram.com/sportsbuddy", color: "from-pink-500 to-purple-500", name: "Instagram" },
-    { icon: Twitter, url: "https://twitter.com/sportsbuddy", color: "from-black to-gray-900", name: "Twitter" },
-    { icon: Facebook, url: "https://facebook.com/sportsbuddy", color: "from-blue-600 to-blue-800", name: "Facebook" },
-    { icon: Linkedin, url: "https://linkedin.com/company/sportsbuddy", color: "from-blue-700 to-blue-900", name: "LinkedIn" },
-    { icon: Youtube, url: "https://youtube.com/sportsbuddy", color: "from-red-500 to-red-700", name: "YouTube" }
+    { icon: Instagram, url: "https://instagram.com/playmeet", color: "from-pink-500 to-purple-500", name: "Instagram" },
+    { icon: Twitter, url: "https://twitter.com/playmeet", color: "from-black to-gray-900", name: "Twitter" },
+    { icon: Facebook, url: "https://facebook.com/playmeet", color: "from-blue-600 to-blue-800", name: "Facebook" },
+    { icon: Linkedin, url: "https://linkedin.com/company/playmeet", color: "from-blue-700 to-blue-900", name: "LinkedIn" },
+    { icon: Youtube, url: "https://youtube.com/playmeet", color: "from-red-500 to-red-700", name: "YouTube" }
   ]
 
   // FAQ items
@@ -170,7 +170,7 @@ const Contact = () => {
       answer: "Simply log in to your account, click 'Create Event' and fill in the details. Our easy-to-use form will guide you through the process."
     },
     {
-      question: "Is SportsBuddy free to use?",
+      question: "Is PLAYMEET free to use?",
       answer: "Yes! Creating an account and joining events is completely free. Some premium features may require a subscription."
     },
     {
@@ -185,10 +185,10 @@ const Contact = () => {
 
   // Office details
   const officeDetails = {
-    name: "SportsBuddy India Headquarters",
+    name: "PLAYMEET India Headquarters",
     address: "Science City Road, Sola, Ahmedabad, Gujarat 380060, India",
     phone: "+91 79 4848 1234",
-    email: "contact@sportsbuddy.com",
+    email: "contact@playmeet.com",
     hours: {
       weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
       weekend: "Saturday: 10:00 AM - 4:00 PM",
@@ -308,7 +308,7 @@ const Contact = () => {
               variants={itemVariants}
               className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Have questions about SportsBuddy? Need help with your account? Want to partner with us?
+              Have questions about PLAYMEET? Need help with your account? Want to partner with us?
               Our friendly team is here to help you connect with the sports community you love.
             </motion.p>
 
@@ -629,7 +629,7 @@ const Contact = () => {
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Find quick answers to common questions about SportsBuddy
+                Find quick answers to common questions about PLAYMEET
               </p>
             </motion.div>
 
@@ -675,7 +675,7 @@ const Contact = () => {
               <CardContent className="p-8 text-center">
                 <motion.div variants={itemVariants} className="mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    Connect with SportsBuddy
+                    Connect with PLAYMEET
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
                     Follow us on social media for the latest updates and sports content

@@ -286,7 +286,7 @@ const AdminLayout = () => {
   const getCurrentPageInfo = () => {
     const allLinks = sidebarSections.flatMap((section) => section.links)
     const currentLink = allLinks.find((link) => link.path === location.pathname)
-    return currentLink || { name: "Admin Panel", description: "Manage your SportsBuddy platform" }
+    return currentLink || { name: "Admin Panel", description: "Manage your PLAYMEET platform" }
   }
 
   // Animated sidebar content
@@ -308,7 +308,7 @@ const AdminLayout = () => {
           </motion.div>
           <div className="flex flex-col">
             <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-              SportsBuddy
+              PLAYMEET
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Admin Console</span>
           </div>
@@ -333,7 +333,7 @@ const AdminLayout = () => {
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-gray-900 dark:text-white truncate">{user?.name || "Admin User"}</p>
             <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-              {user?.email || "admin@sportsbuddy.com"}
+              {user?.email || "admin@playmeet.com"}
             </p>
           </div>
           <Badge className="bg-blue-600 text-white border-0 shadow-lg text-xs">
@@ -553,7 +553,7 @@ const AdminLayout = () => {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-80 p-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl">
-                  <SidebarContent isMobile={true} onClose={() => {}} />
+                  <SidebarContent isMobile={true} onClose={() => { }} />
                 </SheetContent>
               </Sheet>
 

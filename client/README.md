@@ -1,10 +1,10 @@
-# SportsBuddy Client
+# PLAYMEET Client
 
-**React frontend application for the SportsBuddy sports management platform**
+**React frontend application for the PLAYMEET sports management platform**
 
 ## Overview
 
-The SportsBuddy client is a modern React single-page application built with Vite, providing a comprehensive user interface for athletes, event organizers, and sports enthusiasts to connect, manage events, and build communities.
+The PLAYMEET client is a modern React single-page application built with Vite, providing a comprehensive user interface for athletes, event organizers, and sports enthusiasts to connect, manage events, and build communities.
 
 ## Technology Stack
 

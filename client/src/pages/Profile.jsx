@@ -121,7 +121,7 @@ const Profile = () => {
   })
 
   useEffect(() => {
-    document.title = `${user ? `${user.name}'s Profile` : "Profile"} - SportsBuddy`
+    document.title = `${user ? `${user.name}'s Profile` : "Profile"} - PLAYMEET`
   }, [user])
 
   useEffect(() => {

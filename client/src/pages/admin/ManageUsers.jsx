@@ -281,7 +281,7 @@ const ManageUsers = () => {
       if (link.download !== undefined) {
         const url = URL.createObjectURL(blob)
         link.setAttribute('href', url)
-        link.setAttribute('download', `sportsbuddy-users-${new Date().toISOString().split('T')[0]}.csv`)
+        link.setAttribute('download', `playmeet-users-${new Date().toISOString().split('T')[0]}.csv`)
         link.style.visibility = 'hidden'
         document.body.appendChild(link)
         link.click()
@@ -368,7 +368,7 @@ const ManageUsers = () => {
   // Mobile User Card Component
   const MobileUserCard = ({ user, index }) => {
     const RoleIcon = getRoleIcon(user.role)
-    
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -390,11 +390,10 @@ const ManageUsers = () => {
                         {user.name?.charAt(0)?.toUpperCase() || 'U'}
                       </AvatarFallback>
                     </Avatar>
-                    <div className={`absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-white dark:border-gray-900 ${
-                      user.isActive !== false ? 'bg-green-500' : 'bg-gray-400'
-                    }`} />
+                    <div className={`absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-white dark:border-gray-900 ${user.isActive !== false ? 'bg-green-500' : 'bg-gray-400'
+                      }`} />
                   </div>
-                  
+
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <h3 className="font-semibold text-gray-900 dark:text-white truncate text-sm">
@@ -489,7 +488,7 @@ const ManageUsers = () => {
                       {user.isActive !== false ? 'Active' : 'Inactive'}
                     </span>
                   </div>
-                  
+
                   <Button
                     variant="outline"
                     size="sm"
@@ -510,7 +509,7 @@ const ManageUsers = () => {
   // Desktop User Card Component
   const DesktopUserCard = ({ user, index }) => {
     const RoleIcon = getRoleIcon(user.role)
-    
+
     return (
       <motion.div
         key={user._id}
@@ -532,9 +531,8 @@ const ManageUsers = () => {
                       {user.name?.charAt(0)?.toUpperCase() || 'U'}
                     </AvatarFallback>
                   </Avatar>
-                  <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white dark:border-gray-900 ${
-                    user.isActive !== false ? 'bg-green-500' : 'bg-gray-400'
-                  }`} />
+                  <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white dark:border-gray-900 ${user.isActive !== false ? 'bg-green-500' : 'bg-gray-400'
+                    }`} />
                 </div>
 
                 <div className="flex-1">
@@ -754,10 +752,9 @@ const ManageUsers = () => {
                       <p className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-400">{stat.title}</p>
                       <div className="flex items-center gap-1 sm:gap-2">
                         <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</p>
-                        <span className={`text-xs sm:text-sm font-medium ${
-                          stat.changeType === "positive" ? "text-green-600" :
-                          stat.changeType === "negative" ? "text-red-600" : "text-gray-600"
-                        }`}>
+                        <span className={`text-xs sm:text-sm font-medium ${stat.changeType === "positive" ? "text-green-600" :
+                            stat.changeType === "negative" ? "text-red-600" : "text-gray-600"
+                          }`}>
                           {stat.change}
                         </span>
                       </div>
@@ -908,7 +905,7 @@ const ManageUsers = () => {
                         <div className="block lg:hidden">
                           <MobileUserCard user={user} index={index} />
                         </div>
-                        
+
                         {/* Desktop View */}
                         <div className="hidden lg:block">
                           <DesktopUserCard user={user} index={index} />
@@ -981,7 +978,7 @@ const ManageUsers = () => {
               Detailed information about {selectedUser?.name}
             </SheetDescription>
           </SheetHeader>
-          
+
           {selectedUser && (
             <ScrollArea className="h-full mt-6">
               <div className="space-y-6 pb-6">

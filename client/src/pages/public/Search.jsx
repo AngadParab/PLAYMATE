@@ -54,7 +54,7 @@ const Search = () => {
 
   // Page title
   useEffect(() => {
-    document.title = `Search - SportsBuddy`
+    document.title = `Search - PLAYMEET`
   }, [])
 
   // Perform search when params change
@@ -209,8 +209,8 @@ const Search = () => {
                   type="button"
                   onClick={() => setSearchType("events")}
                   className={`px-4 py-2 ${searchType === "events"
-                      ? "bg-primary-light dark:bg-primary-dark text-white"
-                      : "bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                    ? "bg-primary-light dark:bg-primary-dark text-white"
+                    : "bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
                     }`}
                 >
                   Events
@@ -219,8 +219,8 @@ const Search = () => {
                   type="button"
                   onClick={() => setSearchType("users")}
                   className={`px-4 py-2 ${searchType === "users"
-                      ? "bg-primary-light dark:bg-primary-dark text-white"
-                      : "bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                    ? "bg-primary-light dark:bg-primary-dark text-white"
+                    : "bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
                     }`}
                 >
                   Users
@@ -252,121 +252,121 @@ const Search = () => {
               className="overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300"
             >
               <div className="mt-4 p-4 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-semibold text-foreground-light dark:text-foreground-dark">Filters</h3>
-                    <button
-                      type="button"
-                      onClick={clearFilters}
-                      className="text-sm text-primary-light dark:text-primary-dark hover:underline"
-                    >
-                      Clear All
-                    </button>
-                  </div>
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold text-foreground-light dark:text-foreground-dark">Filters</h3>
+                  <button
+                    type="button"
+                    onClick={clearFilters}
+                    className="text-sm text-primary-light dark:text-primary-dark hover:underline"
+                  >
+                    Clear All
+                  </button>
+                </div>
 
-                  {searchType === "events" && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          Category
-                        </label>
-                        <select
-                          name="category"
-                          value={filters.category}
-                          onChange={handleFilterChange}
-                          className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
-                        >
-                          <option value="">All Categories</option>
-                          <option value="Football">Football</option>
-                          <option value="Basketball">Basketball</option>
-                          <option value="Tennis">Tennis</option>
-                          <option value="Running">Running</option>
-                          <option value="Cycling">Cycling</option>
-                          <option value="Swimming">Swimming</option>
-                          <option value="Volleyball">Volleyball</option>
-                          <option value="Cricket">Cricket</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </div>
+                {searchType === "events" && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        Category
+                      </label>
+                      <select
+                        name="category"
+                        value={filters.category}
+                        onChange={handleFilterChange}
+                        className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                      >
+                        <option value="">All Categories</option>
+                        <option value="Football">Football</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Tennis">Tennis</option>
+                        <option value="Running">Running</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Volleyball">Volleyball</option>
+                        <option value="Cricket">Cricket</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          Difficulty
-                        </label>
-                        <select
-                          name="difficulty"
-                          value={filters.difficulty}
-                          onChange={handleFilterChange}
-                          className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
-                        >
-                          <option value="">All Difficulties</option>
-                          <option value="Beginner">Beginner</option>
-                          <option value="Intermediate">Intermediate</option>
-                          <option value="Advanced">Advanced</option>
-                        </select>
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        Difficulty
+                      </label>
+                      <select
+                        name="difficulty"
+                        value={filters.difficulty}
+                        onChange={handleFilterChange}
+                        className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                      >
+                        <option value="">All Difficulties</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                      </select>
+                    </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          Start Date
-                        </label>
-                        <input
-                          type="date"
-                          name="startDate"
-                          value={filters.startDate}
-                          onChange={handleFilterChange}
-                          className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        Start Date
+                      </label>
+                      <input
+                        type="date"
+                        name="startDate"
+                        value={filters.startDate}
+                        onChange={handleFilterChange}
+                        className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                      />
+                    </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          End Date
-                        </label>
-                        <input
-                          type="date"
-                          name="endDate"
-                          value={filters.endDate}
-                          onChange={handleFilterChange}
-                          className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        End Date
+                      </label>
+                      <input
+                        type="date"
+                        name="endDate"
+                        value={filters.endDate}
+                        onChange={handleFilterChange}
+                        className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                      />
+                    </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          Location
-                        </label>
-                        <input
-                          type="text"
-                          name="location"
-                          placeholder="City, State"
-                          value={filters.location}
-                          onChange={handleFilterChange}
-                          className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        Location
+                      </label>
+                      <input
+                        type="text"
+                        name="location"
+                        placeholder="City, State"
+                        value={filters.location}
+                        onChange={handleFilterChange}
+                        className="w-full p-2 rounded-md border border-input-light dark:border-input-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+                      />
+                    </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
-                          Radius (km)
-                        </label>
-                        <input
-                          type="range"
-                          name="radius"
-                          min="1"
-                          max="100"
-                          value={filters.radius}
-                          onChange={handleFilterChange}
-                          className="w-full"
-                        />
-                        <div className="flex justify-between text-xs text-muted-foreground-light dark:text-muted-foreground-dark">
-                          <span>1km</span>
-                          <span>{filters.radius}km</span>
-                          <span>100km</span>
-                        </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground-light dark:text-foreground-dark mb-1">
+                        Radius (km)
+                      </label>
+                      <input
+                        type="range"
+                        name="radius"
+                        min="1"
+                        max="100"
+                        value={filters.radius}
+                        onChange={handleFilterChange}
+                        className="w-full"
+                      />
+                      <div className="flex justify-between text-xs text-muted-foreground-light dark:text-muted-foreground-dark">
+                        <span>1km</span>
+                        <span>{filters.radius}km</span>
+                        <span>100km</span>
                       </div>
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </form>
@@ -640,8 +640,8 @@ const Search = () => {
                 onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                 disabled={currentPage === 1}
                 className={`px-3 py-1 rounded-md ${currentPage === 1
-                    ? "text-muted-foreground-light dark:text-muted-foreground-dark cursor-not-allowed"
-                    : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
+                  ? "text-muted-foreground-light dark:text-muted-foreground-dark cursor-not-allowed"
+                  : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
                   }`}
               >
                 Previous
@@ -665,8 +665,8 @@ const Search = () => {
                     key={pageNum}
                     onClick={() => handlePageChange(pageNum)}
                     className={`w-8 h-8 flex items-center justify-center rounded-md ${currentPage === pageNum
-                        ? "bg-primary-light dark:bg-primary-dark text-white"
-                        : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
+                      ? "bg-primary-light dark:bg-primary-dark text-white"
+                      : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
                       }`}
                   >
                     {pageNum}
@@ -678,8 +678,8 @@ const Search = () => {
                 onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                 disabled={currentPage === totalPages}
                 className={`px-3 py-1 rounded-md ${currentPage === totalPages
-                    ? "text-muted-foreground-light dark:text-muted-foreground-dark cursor-not-allowed"
-                    : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
+                  ? "text-muted-foreground-light dark:text-muted-foreground-dark cursor-not-allowed"
+                  : "text-foreground-light dark:text-foreground-dark hover:bg-muted-light dark:hover:bg-muted-dark"
                   }`}
               >
                 Next

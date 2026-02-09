@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  Bug, 
-  Mail, 
+import {
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  Mail,
   ArrowLeft,
   Shield,
   Zap,
@@ -39,7 +39,7 @@ class ErrorBoundary extends React.Component {
 
   static getDerivedStateFromError(error) {
     // Update state so the next render will show the fallback UI
-    return { 
+    return {
       hasError: true,
       errorId: Date.now().toString(36) + Math.random().toString(36).substr(2)
     };
@@ -96,10 +96,10 @@ class ErrorBoundary extends React.Component {
 
   handleRetry = async () => {
     this.setState({ isRetrying: true });
-    
+
     // Wait a moment before retrying
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     this.setState(prevState => ({
       hasError: false,
       error: null,
@@ -131,8 +131,8 @@ Error Details:
 Please describe what you were doing when this error occurred:
 [Your description here]
     `);
-    
-    window.open(`mailto:support@sportsbuddy.com?subject=${subject}&body=${body}`);
+
+    window.open(`mailto:support@playmeet.com?subject=${subject}&body=${body}`);
   };
 
   toggleDetails = () => {
@@ -155,7 +155,7 @@ Time: ${new Date().toISOString()}
 
   getErrorCategory = () => {
     const message = this.state.error?.message?.toLowerCase() || '';
-    
+
     if (message.includes('network') || message.includes('fetch')) {
       return { type: 'Network Error', color: 'bg-blue-500', icon: Zap };
     }
@@ -165,7 +165,7 @@ Time: ${new Date().toISOString()}
     if (message.includes('permission') || message.includes('unauthorized')) {
       return { type: 'Permission Error', color: 'bg-yellow-500', icon: Shield };
     }
-    
+
     return { type: 'Application Error', color: 'bg-red-500', icon: Bug };
   };
 
@@ -179,23 +179,23 @@ Time: ${new Date().toISOString()}
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Large Gradient Orbs */}
-            <motion.div 
+            <motion.div
               className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl"
-              animate={{ 
+              animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.5, 0.3]
               }}
               transition={{ duration: 8, repeat: Infinity }}
             />
-            <motion.div 
+            <motion.div
               className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-destructive/20 to-destructive/5 rounded-full blur-3xl"
-              animate={{ 
+              animate={{
                 scale: [1.2, 1, 1.2],
                 opacity: [0.3, 0.5, 0.3]
               }}
               transition={{ duration: 10, repeat: Infinity }}
             />
-            
+
             {/* Floating Particles */}
             {[...Array(30)].map((_, i) => (
               <motion.div
@@ -236,24 +236,24 @@ Time: ${new Date().toISOString()}
               <Card className="border-border/40 bg-card/60 backdrop-blur-2xl shadow-2xl shadow-black/10 dark:shadow-black/50 overflow-hidden relative">
                 {/* Top Accent Bar */}
                 <div className={`h-1.5 w-full ${errorCategory.color}`} />
-                
+
                 <CardHeader className="text-center space-y-8 pb-8 pt-12">
                   {/* 3D Error Icon */}
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    transition={{ 
+                    transition={{
                       type: "spring",
                       stiffness: 200,
                       damping: 15,
-                      delay: 0.2 
+                      delay: 0.2
                     }}
                     className="flex justify-center"
                   >
                     <div className="relative">
                       {/* Main Icon Container */}
                       <motion.div
-                        animate={{ 
+                        animate={{
                           rotateY: [0, 10, -10, 0],
                           rotateX: [0, -5, 5, 0]
                         }}
@@ -262,21 +262,21 @@ Time: ${new Date().toISOString()}
                         style={{ transformStyle: "preserve-3d" }}
                       >
                         <ErrorIcon className="w-14 h-14 text-white relative z-10" strokeWidth={2} />
-                        
+
                         {/* Inner glow */}
                         <div className="absolute inset-2 bg-white/20 rounded-2xl blur-md" />
                       </motion.div>
-                      
+
                       {/* Pulsing Ring */}
                       <motion.div
-                        animate={{ 
+                        animate={{
                           scale: [1, 1.3, 1],
                           opacity: [0.4, 0.8, 0.4]
                         }}
                         transition={{ duration: 2.5, repeat: Infinity }}
                         className={`absolute inset-0 ${errorCategory.color} rounded-3xl blur-2xl opacity-50`}
                       />
-                      
+
                       {/* Rotating Ring */}
                       <motion.div
                         animate={{ rotate: 360 }}
@@ -310,7 +310,7 @@ Time: ${new Date().toISOString()}
                       Oops! Something Went Wrong
                     </CardTitle>
                     <CardDescription className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                      We encountered an unexpected error. Our team has been automatically notified and we're working on a fix. 
+                      We encountered an unexpected error. Our team has been automatically notified and we're working on a fix.
                       Your experience matters to us!
                     </CardDescription>
                   </motion.div>
@@ -438,8 +438,8 @@ Time: ${new Date().toISOString()}
                     className="flex flex-wrap justify-center gap-3"
                   >
                     {[
-                      { 
-                        onClick: this.handleRetry, 
+                      {
+                        onClick: this.handleRetry,
                         disabled: this.state.isRetrying,
                         variant: 'default',
                         icon: RefreshCw,
@@ -514,7 +514,7 @@ Time: ${new Date().toISOString()}
               >
                 <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                   <Shield className="w-4 h-4" />
-                  <span>SportsBuddy Error Tracking • Your data is secure</span>
+                  <span>PLAYMEET Error Tracking • Your data is secure</span>
                 </div>
                 <div className="text-xs text-muted-foreground/70">
                   Error logged and reported automatically

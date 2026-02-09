@@ -127,7 +127,7 @@ const Communities = () => {
 
   // Set page title
   useEffect(() => {
-    document.title = "Communities - SportsBuddy"
+    document.title = "Communities - PLAYMEET"
   }, [])
 
   const handleJoinCommunity = async (communityId) => {

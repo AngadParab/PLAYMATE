@@ -29,8 +29,8 @@ const httpServer = createServer(app);
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://sports-buddy2.vercel.app",
-  "https://sportsbuddy.princepatel.me"
+  "https://PLAYMEET-2.vercel.app",
+  "https://PLAYMEET.princepatel.me"
 ];
 
 // Configure Socket.io
@@ -77,11 +77,11 @@ app.use("/api/events", eventRoute);
 app.use("/api/users", userRoute);
 app.use('/api/admin', adminRoute);
 app.use('/api/notifications', notificationRoute);
-app.use("/api/upload",  uploadRoute);
+app.use("/api/upload", uploadRoute);
 app.use("/api/athletes", athletesRoute);
 app.use("/api/community", communityRoute);
 app.use("/api/leaderboard", leaderboardRoute);
-app.use("/api/venues",  venueRoute);
+app.use("/api/venues", venueRoute);
 
 // Error handling middleware for rate limiting
 app.use((err, req, res, next) => {

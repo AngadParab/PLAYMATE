@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { 
-  Search, 
+import {
+  Search,
   Filter,
-  Users, 
-  Plus, 
-  TrendingUp, 
+  Users,
+  Plus,
+  TrendingUp,
   Award,
   MapPin,
   Calendar,
@@ -55,7 +55,7 @@ const Community = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   // State management
   const [communities, setCommunities] = useState([]);
   const [featuredCommunities, setFeaturedCommunities] = useState([]);
@@ -65,7 +65,7 @@ const Community = () => {
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
-  
+
   // Filters
   const [filters, setFilters] = useState({
     search: searchParams.get('search') || '',
@@ -76,7 +76,7 @@ const Community = () => {
     minMembers: searchParams.get('minMembers') || '',
     maxMembers: searchParams.get('maxMembers') || ''
   });
-  
+
   // Pagination
   const [pagination, setPagination] = useState({
     currentPage: 1,
@@ -150,16 +150,16 @@ const Community = () => {
 
       const queryFilters = newFilters || filters;
       const queryParams = new URLSearchParams();
-      
+
       Object.entries(queryFilters).forEach(([key, value]) => {
         if (value && value !== 'all') queryParams.append(key, value);
       });
-      
+
       queryParams.append('page', page);
       queryParams.append('limit', pagination.limit);
 
       const response = await api.get(`/community?${queryParams}`);
-      
+
       if (response.data.success) {
         if (page === 1) {
           setCommunities(response.data.data);
@@ -167,7 +167,7 @@ const Community = () => {
           setCommunities(prev => [...prev, ...response.data.data]);
         }
         setPagination(response.data.pagination);
-        
+
         // Update URL params
         const newSearchParams = new URLSearchParams();
         Object.entries(queryFilters).forEach(([key, value]) => {
@@ -278,20 +278,20 @@ const Community = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950/20"
     >
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         variants={itemVariants}
         className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 dark:from-blue-800 dark:via-indigo-800 dark:to-blue-900"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 bg-black/10" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center text-white">
             <motion.div
@@ -303,15 +303,15 @@ const Community = () => {
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium">Join the Sports Revolution</span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               variants={itemVariants}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
             >
               Sports Communities
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
@@ -320,7 +320,7 @@ const Community = () => {
 
             {/* Quick Stats */}
             {stats && (
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto mb-8"
               >
@@ -343,7 +343,7 @@ const Community = () => {
               </motion.div>
             )}
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -363,10 +363,10 @@ const Community = () => {
                   className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
                   <UserPlus className="w-5 h-5 mr-2" />
-                  Join SportsBuddy
+                  Join PLAYMEET
                 </Button>
               )}
-              
+
               <Button
                 size="lg"
                 variant="outline"
@@ -385,7 +385,7 @@ const Community = () => {
       </motion.section>
 
       {/* Categories Section */}
-      <motion.section 
+      <motion.section
         variants={itemVariants}
         className="relative py-16 bg-white dark:bg-gray-900/50"
       >
@@ -409,11 +409,11 @@ const Community = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Card 
+                <Card
                   className={cn(
                     "cursor-pointer transition-all duration-300 border-0 overflow-hidden group",
-                    filters.category === category.value 
-                      ? "ring-2 ring-blue-500 shadow-lg" 
+                    filters.category === category.value
+                      ? "ring-2 ring-blue-500 shadow-lg"
                       : "hover:shadow-xl"
                   )}
                   onClick={() => handleFilterChange('category', category.value)}
@@ -435,7 +435,7 @@ const Community = () => {
 
       {/* Featured Communities */}
       {featuredCommunities.length > 0 && (
-        <motion.section 
+        <motion.section
           variants={itemVariants}
           className="py-16 bg-gradient-to-r from-gray-50 to-blue-50/50 dark:from-gray-800/50 dark:to-blue-900/20"
         >
@@ -470,8 +470,8 @@ const Community = () => {
                   variants={cardHoverVariants}
                   whileHover="hover"
                 >
-                  <FeaturedCommunityCard 
-                    community={community} 
+                  <FeaturedCommunityCard
+                    community={community}
                     onJoin={handleJoinCommunity}
                     user={user}
                   />
@@ -483,17 +483,17 @@ const Community = () => {
       )}
 
       {/* Main Content */}
-      <motion.section 
+      <motion.section
         id="explore"
         variants={itemVariants}
         className="py-16 bg-white dark:bg-gray-900"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            
+
             {/* Sidebar */}
             <motion.div variants={itemVariants} className="lg:col-span-1 space-y-6">
-              
+
               {/* Search & Filters */}
               <Card className="sticky top-4">
                 <CardHeader className="pb-3">
@@ -696,7 +696,7 @@ const Community = () => {
 
             {/* Main Content */}
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
-              
+
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
@@ -763,7 +763,7 @@ const Community = () => {
               ) : (
                 <>
                   <div className={cn(
-                    viewMode === 'grid' 
+                    viewMode === 'grid'
                       ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
                       : "space-y-4"
                   )}>
@@ -777,14 +777,14 @@ const Community = () => {
                         whileHover="hover"
                       >
                         {viewMode === 'grid' ? (
-                          <CommunityCard 
-                            community={community} 
+                          <CommunityCard
+                            community={community}
                             onJoin={handleJoinCommunity}
                             user={user}
                           />
                         ) : (
-                          <CommunityListItem 
-                            community={community} 
+                          <CommunityListItem
+                            community={community}
                             onJoin={handleJoinCommunity}
                             user={user}
                           />
@@ -839,13 +839,13 @@ const FeaturedCommunityCard = ({ community, onJoin, user }) => {
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        
+
         {/* Privacy Badge */}
         <div className="absolute top-3 right-3">
           <Badge className={cn(
             "flex items-center gap-1",
-            community.isPrivate 
-              ? "bg-orange-500/90 text-white" 
+            community.isPrivate
+              ? "bg-orange-500/90 text-white"
               : "bg-green-500/90 text-white"
           )}>
             {community.isPrivate ? <Lock className="w-3 h-3" /> : <Globe className="w-3 h-3" />}
@@ -870,7 +870,7 @@ const FeaturedCommunityCard = ({ community, onJoin, user }) => {
               {community.name?.charAt(0)?.toUpperCase()}
             </AvatarFallback>
           </Avatar>
-          
+
           <div className="flex-1 min-w-0">
             <h3 className="font-bold text-lg text-gray-900 dark:text-white truncate mb-1">
               {community.name}
@@ -916,7 +916,7 @@ const FeaturedCommunityCard = ({ community, onJoin, user }) => {
             <Eye className="w-4 h-4 mr-2" />
             View
           </Button>
-          
+
           {user && (
             <Button
               onClick={() => onJoin(community._id, community.isPrivate)}
@@ -949,12 +949,12 @@ const CommunityCard = ({ community, onJoin, user }) => {
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        
+
         <div className="absolute top-2 right-2">
           <Badge className={cn(
             "flex items-center gap-1 text-xs",
-            community.isPrivate 
-              ? "bg-orange-500/90 text-white" 
+            community.isPrivate
+              ? "bg-orange-500/90 text-white"
               : "bg-green-500/90 text-white"
           )}>
             {community.isPrivate ? <Lock className="w-3 h-3" /> : <Globe className="w-3 h-3" />}
@@ -972,7 +972,7 @@ const CommunityCard = ({ community, onJoin, user }) => {
               {community.name?.charAt(0)?.toUpperCase()}
             </AvatarFallback>
           </Avatar>
-          
+
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-gray-900 dark:text-white truncate text-sm">
               {community.name}
@@ -1017,7 +1017,7 @@ const CommunityCard = ({ community, onJoin, user }) => {
           >
             View
           </Button>
-          
+
           {user && (
             <Button
               onClick={() => onJoin(community._id, community.isPrivate)}
@@ -1062,8 +1062,8 @@ const CommunityListItem = ({ community, onJoin, user }) => {
                   </Badge>
                   <Badge className={cn(
                     "flex items-center gap-1",
-                    community.isPrivate 
-                      ? "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400" 
+                    community.isPrivate
+                      ? "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400"
                       : "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
                   )}>
                     {community.isPrivate ? <Lock className="w-3 h-3" /> : <Globe className="w-3 h-3" />}
@@ -1082,7 +1082,7 @@ const CommunityListItem = ({ community, onJoin, user }) => {
                   <Eye className="w-4 h-4 mr-2" />
                   View
                 </Button>
-                
+
                 {user && (
                   <Button
                     onClick={() => onJoin(community._id, community.isPrivate)}

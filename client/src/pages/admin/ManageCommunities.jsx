@@ -276,7 +276,7 @@ const ManageCommunities = () => {
       if (link.download !== undefined) {
         const url = URL.createObjectURL(blob)
         link.setAttribute("href", url)
-        link.setAttribute("download", `sportsbuddy-communities-${new Date().toISOString().split("T")[0]}.csv`)
+        link.setAttribute("download", `playmeet-communities-${new Date().toISOString().split("T")[0]}.csv`)
         link.style.visibility = "hidden"
         document.body.appendChild(link)
         link.click()
@@ -833,13 +833,12 @@ const ManageCommunities = () => {
                           {stat.value}
                         </p>
                         <span
-                          className={`text-xs sm:text-sm font-medium ${
-                            stat.changeType === "positive"
+                          className={`text-xs sm:text-sm font-medium ${stat.changeType === "positive"
                               ? "text-green-600"
                               : stat.changeType === "negative"
                                 ? "text-red-600"
                                 : "text-gray-600"
-                          }`}
+                            }`}
                         >
                           {stat.change}
                         </span>

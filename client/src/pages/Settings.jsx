@@ -18,7 +18,7 @@ const Settings = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [passwordLoading, setPasswordLoading] = useState(false);
-  
+
   // Load user preferences
   useEffect(() => {
     if (user && user.preferences) {
@@ -32,9 +32,9 @@ const Settings = () => {
 
   // Page Title
   useEffect(() => {
-    document.title = 'Settings - SportsBuddy';
+    document.title = 'Settings - PLAYMEET';
   }, []);
-  
+
   const handlePreferenceChange = (e) => {
     const { name, value, type, checked } = e.target;
     setPreferences(prev => ({
@@ -42,45 +42,45 @@ const Settings = () => {
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-  
+
   const handlePasswordChange = (e) => {
     const { name, value } = e.target;
     setPasswordData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user types
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };
-  
+
   const validatePasswordForm = () => {
     const newErrors = {};
-    
+
     if (!passwordData.currentPassword) {
       newErrors.currentPassword = 'Current password is required';
     }
-    
+
     if (!passwordData.newPassword) {
       newErrors.newPassword = 'New password is required';
     } else if (passwordData.newPassword.length < 6) {
       newErrors.newPassword = 'Password must be at least 6 characters';
     }
-    
+
     if (passwordData.newPassword !== passwordData.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  
+
   const handlePreferencesSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
       const result = await updatePreferences(preferences);
-      
+
       if (result.success) {
         toast.success('Preferences updated successfully');
       }
@@ -91,20 +91,20 @@ const Settings = () => {
       setLoading(false);
     }
   };
-  
+
   const handlePasswordSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validatePasswordForm()) return;
-    
+
     setPasswordLoading(true);
-    
+
     try {
       const result = await updatePassword({
         currentPassword: passwordData.currentPassword,
         newPassword: passwordData.newPassword
       });
-      
+
       if (result.success) {
         toast.success('Password updated successfully');
         setPasswordData({
@@ -119,11 +119,11 @@ const Settings = () => {
       setPasswordLoading(false);
     }
   };
-  
+
   return (
     <div className="container mx-auto max-w-4xl px-4 py-8">
       <h1 className="mb-8 text-3xl font-bold text-gray-900 dark:text-white">Settings</h1>
-      
+
       <div className="grid gap-8 md:grid-cols-2">
         {/* Notification Preferences */}
         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -131,7 +131,7 @@ const Settings = () => {
             <Bell className="mr-2 h-5 w-5" />
             Notification Preferences
           </h2>
-          
+
           <form onSubmit={handlePreferencesSubmit}>
             <div className="mb-4">
               <div className="mb-2 flex items-center justify-between">
@@ -155,7 +155,7 @@ const Settings = () => {
                 Receive email notifications about event updates and messages
               </p>
             </div>
-            
+
             <div className="mb-4">
               <div className="mb-2 flex items-center justify-between">
                 <label htmlFor="pushNotifications" className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -178,7 +178,7 @@ const Settings = () => {
                 Receive browser notifications for real-time updates
               </p>
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="radius" className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Event Search Radius (km)
@@ -202,7 +202,7 @@ const Settings = () => {
                 Set the default radius for finding nearby events
               </p>
             </div>
-            
+
             <button
               type="submit"
               disabled={loading}
@@ -213,14 +213,14 @@ const Settings = () => {
             </button>
           </form>
         </div>
-        
+
         {/* Change Password */}
         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 flex items-center text-xl font-semibold text-gray-900 dark:text-white">
             <Lock className="mr-2 h-5 w-5" />
             Change Password
           </h2>
-          
+
           <form onSubmit={handlePasswordSubmit}>
             <div className="mb-4">
               <label htmlFor="currentPassword" className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -236,9 +236,8 @@ const Settings = () => {
                   id="currentPassword"
                   value={passwordData.currentPassword}
                   onChange={handlePasswordChange}
-                  className={`block w-full rounded-md border ${
-                    errors.currentPassword ? 'border-red-300' : 'border-gray-300'
-                  } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
+                  className={`block w-full rounded-md border ${errors.currentPassword ? 'border-red-300' : 'border-gray-300'
+                    } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
                   placeholder="Enter your current password"
                 />
               </div>
@@ -246,7 +245,7 @@ const Settings = () => {
                 <p className="mt-1 text-xs text-red-500">{errors.currentPassword}</p>
               )}
             </div>
-            
+
             <div className="mb-4">
               <label htmlFor="newPassword" className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                 New Password
@@ -261,9 +260,8 @@ const Settings = () => {
                   id="newPassword"
                   value={passwordData.newPassword}
                   onChange={handlePasswordChange}
-                  className={`block w-full rounded-md border ${
-                    errors.newPassword ? 'border-red-300' : 'border-gray-300'
-                  } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
+                  className={`block w-full rounded-md border ${errors.newPassword ? 'border-red-300' : 'border-gray-300'
+                    } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
                   placeholder="Enter your new password"
                 />
               </div>
@@ -271,7 +269,7 @@ const Settings = () => {
                 <p className="mt-1 text-xs text-red-500">{errors.newPassword}</p>
               )}
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="confirmPassword" className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Confirm New Password
@@ -286,9 +284,8 @@ const Settings = () => {
                   id="confirmPassword"
                   value={passwordData.confirmPassword}
                   onChange={handlePasswordChange}
-                  className={`block w-full rounded-md border ${
-                    errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
-                  } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
+                  className={`block w-full rounded-md border ${errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
+                    } bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 sm:text-sm`}
                   placeholder="Confirm your new password"
                 />
               </div>
@@ -296,7 +293,7 @@ const Settings = () => {
                 <p className="mt-1 text-xs text-red-500">{errors.confirmPassword}</p>
               )}
             </div>
-            
+
             <button
               type="submit"
               disabled={passwordLoading}

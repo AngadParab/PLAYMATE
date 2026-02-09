@@ -1,4 +1,4 @@
-const SportsBuddyLoader = ({ message = "Loading..." }) => {
+const PlayMeetLoader = ({ message = "Loading..." }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 transition-colors duration-300 bg-white dark:bg-zinc-950">
       <div className="flex flex-col items-center gap-8">
@@ -48,4 +48,4 @@ const SportsBuddyLoader = ({ message = "Loading..." }) => {
   );
 };
 
-export default SportsBuddyLoader;
+export default PlayMeetLoader;

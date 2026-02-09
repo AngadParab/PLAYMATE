@@ -173,7 +173,7 @@ const Events = () => {
 
   // Page title
   useEffect(() => {
-    document.title = "Sports Events - SportsBuddy"
+    document.title = "Sports Events - PLAYMEET"
   }, [])
 
   // Handle filter changes

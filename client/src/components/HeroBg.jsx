@@ -12,7 +12,7 @@ export const HeroBg = () => {
         }}
       />
 
-      {/* Main blue orb - Primary brand color for SportsBuddy */}
+      {/* Main blue orb - Primary brand color for PLAYMEET */}
       <div
         className="absolute -top-40 left-1/2 -translate-x-1/2 h-[700px] w-[700px] rounded-full animate-float-slow"
         style={{
@@ -42,7 +42,7 @@ export const HeroBg = () => {
         }}
       />
 
-      {/* Top ambient glow - SportsBuddy primary accent */}
+      {/* Top ambient glow - PLAYMEET primary accent */}
       <div
         className="absolute inset-0"
         style={{

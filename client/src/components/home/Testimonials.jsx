@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { 
-  Star, 
-  Quote, 
-  Users, 
+import {
+  Star,
+  Quote,
+  Users,
   Trophy,
   MapPin,
   Sparkles,
@@ -21,7 +21,7 @@ const Testimonials = () => {
       id: 1,
       name: "Sarah Johnson",
       role: "Basketball Enthusiast",
-      content: "SportsBuddy has completely transformed how I find local basketball games. I've met amazing people and improved my skills tremendously! The community here is incredibly supportive.",
+      content: "PLAYMEET has completely transformed how I find local basketball games. I've met amazing people and improved my skills tremendously! The community here is incredibly supportive.",
       rating: 5,
       location: "New York",
       sport: "Basketball",
@@ -34,7 +34,7 @@ const Testimonials = () => {
       id: 2,
       name: "Michael Chen",
       role: "Football Player",
-      content: "I moved to a new city and was struggling to find people to play football with. Thanks to SportsBuddy, I now have a regular team and we've won 3 local tournaments!",
+      content: "I moved to a new city and was struggling to find people to play football with. Thanks to PLAYMEET, I now have a regular team and we've won 3 local tournaments!",
       rating: 5,
       location: "Los Angeles",
       sport: "Football",
@@ -107,7 +107,7 @@ const Testimonials = () => {
             Loved by Athletes <span className="text-gradient">Everywhere</span>
           </h2>
           <p className="text-base text-muted-foreground">
-            Join thousands of sports enthusiasts who have found their community through SportsBuddy.
+            Join thousands of sports enthusiasts who have found their community through PLAYMEET.
             Here's what they have to say about their experience.
           </p>
         </div>
@@ -115,7 +115,7 @@ const Testimonials = () => {
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <div
               key={index}
               className="bg-secondary/10 p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group relative"
             >
@@ -136,8 +136,8 @@ const Testimonials = () => {
               {/* Author */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-secondary p-1 border border-border">
-                  <img 
-                    src={testimonial.image} 
+                  <img
+                    src={testimonial.image}
                     alt={testimonial.name}
                     className="w-full h-full rounded-full object-cover"
                   />
@@ -158,5 +158,5 @@ const Testimonials = () => {
     </section>
   )
 }
-  
-  export default Testimonials
+
+export default Testimonials

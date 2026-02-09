@@ -103,7 +103,7 @@ const Register = () => {
   }, [user, navigate])
 
   useEffect(() => {
-    document.title = "Join SportsBuddy - Create Account"
+    document.title = "Join PLAYMEET - Create Account"
   }, [])
 
   const onSubmit = async (data) => {
@@ -141,7 +141,7 @@ const Register = () => {
                   </div>
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground mb-1">
-                  Join SportsBuddy
+                  Join PLAYMEET
                 </CardTitle>
                 <p className="text-muted-foreground text-xs">
                   Create your account and start your sports journey
@@ -359,7 +359,7 @@ const Register = () => {
             className="lg:hidden text-center mt-4 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-700"
           >
             <div className="flex items-center justify-center space-x-1">
-              <span className="font-bold text-base text-foreground">SportsBuddy</span>
+              <span className="font-bold text-base text-foreground">PLAYMEET</span>
               <Zap className="w-4 h-4 text-yellow-500" />
             </div>
             <p className="text-xs text-muted-foreground mt-1">

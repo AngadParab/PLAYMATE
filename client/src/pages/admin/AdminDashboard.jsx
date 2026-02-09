@@ -124,7 +124,7 @@ const AdminDashboard = () => {
 
   // Dynamic page title
   useEffect(() => {
-    document.title = "Admin Dashboard - SportsBuddy"
+    document.title = "Admin Dashboard - PLAYMEET"
   }, [])
 
   // Calculate growth rates and trends
@@ -248,7 +248,7 @@ const AdminDashboard = () => {
       const url = URL.createObjectURL(blob)
       const link = document.createElement("a")
       link.href = url
-      link.download = `sportsbuddy-analytics-${new Date().toISOString().split("T")[0]}.pdf`
+      link.download = `playmeet-analytics-${new Date().toISOString().split("T")[0]}.pdf`
       // Trigger download
       document.body.appendChild(link)
       link.click()
@@ -425,7 +425,7 @@ const AdminDashboard = () => {
                   Admin Dashboard
                 </h1>
                 <p className="text-white/90 text-sm sm:text-base lg:text-lg leading-relaxed">
-                  Welcome back! Here's what's happening with SportsBuddy today.
+                  Welcome back! Here's what's happening with PLAYMEET today.
                 </p>
               </div>
             </div>
@@ -521,10 +521,10 @@ const AdminDashboard = () => {
                         )}
                         <span
                           className={`text-xs sm:text-sm font-medium truncate ${stat.trend === "positive"
-                              ? "text-green-600"
-                              : stat.trend === "negative"
-                                ? "text-red-600"
-                                : "text-gray-600 dark:text-gray-400"
+                            ? "text-green-600"
+                            : stat.trend === "negative"
+                              ? "text-red-600"
+                              : "text-gray-600 dark:text-gray-400"
                             }`}
                         >
                           {stat.change}

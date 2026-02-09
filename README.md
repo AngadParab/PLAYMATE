@@ -21,7 +21,7 @@ Secure user authentication system with industry-standard practices. Users can re
 - Role-based access control (User/Admin)
 
 ### Event Management
-The core feature of SportsBuddy—a complete event lifecycle management system. Users can create sports events with detailed information including sport type, location, date/time, skill level requirements, and participant limits. Event creators can upload multiple images, define custom rules, and specify required equipment. Participants can join events, and once joined, they gain access to a real-time chat room to coordinate with other participants.
+The core feature of PLAYMEET—a complete event lifecycle management system. Users can create sports events with detailed information including sport type, location, date/time, skill level requirements, and participant limits. Event creators can upload multiple images, define custom rules, and specify required equipment. Participants can join events, and once joined, they gain access to a real-time chat room to coordinate with other participants.
 
 - Full CRUD operations for sports events
 - Multi-image uploads via Cloudinary
@@ -114,7 +114,7 @@ A powerful administrative interface for platform management. Admins can search, 
 
 ## Live Demo & Repository
 
-- **Live Demo:** [SportsBuddy](https://sports-buddy2.vercel.app)
+- **Live Demo:** [PLAYMEET](https://sports-buddy2.vercel.app)
 - **GitHub:** [github.com/imprince26/SportsBuddy2](https://github.com/imprince26/SportsBuddy2)
 
 ---

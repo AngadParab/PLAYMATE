@@ -12,21 +12,21 @@ import { Card } from "@/components/ui/card"
 
 const NotFound = () => {
   useEffect(() => {
-    document.title = '404 - Page Not Found | SportsBuddy'
+    document.title = '404 - Page Not Found | PLAYMEET'
   }, [])
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-background">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] -z-10" />
-      
+
       {/* Decorative Blur Elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
 
       <div className="container max-w-4xl px-4 py-16 text-center relative z-10">
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          
+
           {/* 404 Graphic */}
           <div className="relative inline-block">
             <h1 className="text-[10rem] md:text-[12rem] font-black text-primary/5 leading-none select-none">
@@ -57,7 +57,7 @@ const NotFound = () => {
                 Back to Home
               </Link>
             </Button>
-            
+
             <Button asChild variant="outline" size="lg" className="h-12 px-8 rounded-full border-2 hover:bg-secondary/50">
               <Link to="/events">
                 <Search className="w-4 h-4 mr-2" />
@@ -73,7 +73,7 @@ const NotFound = () => {
               { title: "Find Athletes", desc: "Connect with others", href: "/athletes", icon: Search },
               { title: "Go Back", desc: "Previous page", action: () => window.history.back(), icon: ArrowLeft },
             ].map((item, i) => (
-              <Card 
+              <Card
                 key={i}
                 className="p-4 hover:bg-secondary/50 transition-colors cursor-pointer group border-border/50 shadow-sm hover:shadow-md"
                 onClick={item.action ? item.action : undefined}

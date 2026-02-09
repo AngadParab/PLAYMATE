@@ -137,7 +137,7 @@ const AdminVenues = () => {
       if (link.download !== undefined) {
         const url = URL.createObjectURL(blob);
         link.setAttribute("href", url);
-        link.setAttribute("download", `sportsbuddy-venues-${new Date().toISOString().split("T")[0]}.csv`);
+        link.setAttribute("download", `playmeet-venues-${new Date().toISOString().split("T")[0]}.csv`);
         link.style.visibility = "hidden";
         document.body.appendChild(link);
         link.click();

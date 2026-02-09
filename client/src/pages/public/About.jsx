@@ -40,7 +40,7 @@ const About = () => {
 
   // Page title
   useEffect(() => {
-    document.title = "About Us - SportsBuddy"
+    document.title = "About Us - PLAYMEET"
   }, [])
 
   // Our Mission & Vision
@@ -85,7 +85,7 @@ const About = () => {
     {
       year: "2022",
       title: "The Beginning",
-      description: "SportsBuddy was founded in Ahmedabad with a vision to connect sports enthusiasts",
+      description: "PLAYMEET was founded in Ahmedabad with a vision to connect sports enthusiasts",
       milestone: "Company Founded",
       icon: Sparkles,
       color: "blue"
@@ -209,7 +209,7 @@ const About = () => {
                 </div>
                 <div className="text-left">
                   <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-                    About SportsBuddy
+                    About PLAYMEET
                   </h1>
                   <p className="text-lg text-center mt-2 text-gray-600 dark:text-gray-400">
                     Connecting athletes, building communities
@@ -221,7 +221,7 @@ const About = () => {
             <p
               className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-12 leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-200"
             >
-              SportsBuddy is India's fastest-growing sports community platform, designed to bring athletes together,
+              PLAYMEET is India's fastest-growing sports community platform, designed to bring athletes together,
               organize events, and create lasting connections through the power of sports. From weekend warriors to
               professional athletes, we're building a world where everyone can find their sporting tribe.
             </p>
@@ -268,8 +268,8 @@ const About = () => {
                     key={key}
                     onClick={() => setActiveTab(key)}
                     className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${activeTab === key
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                       }`}
                   >
                     {missionData[key].title}
@@ -466,11 +466,11 @@ const About = () => {
               <CardContent className="p-12 text-center relative z-10">
                 <motion.div variants={itemVariants} className="mb-8">
                   <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                    Ready to Join the SportsBuddy Community?
+                    Ready to Join the PLAYMEET Community?
                   </h2>
                   <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
                     Whether you're looking to find training partners, join events, or organize competitions,
-                    SportsBuddy is your gateway to an active sporting lifestyle.
+                    PLAYMEET is your gateway to an active sporting lifestyle.
                   </p>
                 </motion.div>
 
@@ -541,9 +541,9 @@ const About = () => {
                     Get in Touch
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    contact@sportsbuddy.com<br />
-                    support@sportsbuddy.com<br />
-                    partnerships@sportsbuddy.com
+                    contact@playmeet.com<br />
+                    support@playmeet.com<br />
+                    partnerships@playmeet.com
                   </p>
                   <Button variant="outline" size="sm">
                     <Mail className="w-4 h-4 mr-2" />

@@ -2,7 +2,7 @@
 import { Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import SportsBuddyLoader from './components/Loader';
+import PlayMeetLoader from './components/Loader';
 import { useAuth } from '@/hooks/useAuth';
 import { useMetadata } from '@/hooks/useMetadata';
 import Layout from '@/components/layout/Layout';
@@ -81,7 +81,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 // Loading Component with page-specific messages
 const PageLoader = ({ message = "Loading amazing sports events..." }) => (
   <div className="fixed inset-0 z-50">
-    <SportsBuddyLoader message={message} />
+    <PlayMeetLoader message={message} />
   </div>
 );
 

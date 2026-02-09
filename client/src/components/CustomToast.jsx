@@ -107,7 +107,7 @@ const CustomToast = () => {
 
   const getToastStyles = (type, currentTheme) => {
     const isDark = currentTheme === 'dark';
-    
+
     // Base styles for both themes
     const baseLight = "bg-white/95 backdrop-blur-xl border shadow-xl";
     const baseDark = "bg-slate-900/95 backdrop-blur-xl border shadow-2xl";
@@ -117,57 +117,57 @@ const CustomToast = () => {
       case 'success':
         return cn(
           base,
-          isDark 
-            ? 'border-green-500/30 shadow-green-500/10' 
+          isDark
+            ? 'border-green-500/30 shadow-green-500/10'
             : 'border-green-200/60 shadow-green-100/50'
         );
       case 'error':
         return cn(
           base,
-          isDark 
-            ? 'border-red-500/30 shadow-red-500/10' 
+          isDark
+            ? 'border-red-500/30 shadow-red-500/10'
             : 'border-red-200/60 shadow-red-100/50'
         );
       case 'warning':
         return cn(
           base,
-          isDark 
-            ? 'border-yellow-500/30 shadow-yellow-500/10' 
+          isDark
+            ? 'border-yellow-500/30 shadow-yellow-500/10'
             : 'border-yellow-200/60 shadow-yellow-100/50'
         );
       case 'info':
         return cn(
           base,
-          isDark 
-            ? 'border-blue-500/30 shadow-blue-500/10' 
+          isDark
+            ? 'border-blue-500/30 shadow-blue-500/10'
             : 'border-blue-200/60 shadow-blue-100/50'
         );
       case 'loading':
         return cn(
           base,
-          isDark 
-            ? 'border-slate-700/40 shadow-slate-900/20' 
+          isDark
+            ? 'border-slate-700/40 shadow-slate-900/20'
             : 'border-slate-200/60 shadow-slate-100/50'
         );
       case 'achievement':
         return cn(
           base,
-          isDark 
-            ? 'border-purple-500/30 shadow-purple-500/10' 
+          isDark
+            ? 'border-purple-500/30 shadow-purple-500/10'
             : 'border-purple-200/60 shadow-purple-100/50'
         );
       case 'sports':
         return cn(
           base,
-          isDark 
-            ? 'border-primary/30 shadow-primary/10' 
+          isDark
+            ? 'border-primary/30 shadow-primary/10'
             : 'border-primary/30 shadow-primary/20'
         );
       default:
         return cn(
           base,
-          isDark 
-            ? 'border-slate-700/40 shadow-slate-900/20' 
+          isDark
+            ? 'border-slate-700/40 shadow-slate-900/20'
             : 'border-slate-200/60 shadow-slate-100/50'
         );
     }
@@ -175,39 +175,39 @@ const CustomToast = () => {
 
   const getIconWrapperStyles = (type, currentTheme) => {
     const isDark = currentTheme === 'dark';
-    
+
     switch (type) {
       case 'success':
-        return isDark 
-          ? 'bg-green-500/15 text-green-400' 
+        return isDark
+          ? 'bg-green-500/15 text-green-400'
           : 'bg-green-50 text-green-600';
       case 'error':
-        return isDark 
-          ? 'bg-red-500/15 text-red-400' 
+        return isDark
+          ? 'bg-red-500/15 text-red-400'
           : 'bg-red-50 text-red-600';
       case 'warning':
-        return isDark 
-          ? 'bg-yellow-500/15 text-yellow-400' 
+        return isDark
+          ? 'bg-yellow-500/15 text-yellow-400'
           : 'bg-yellow-50 text-yellow-600';
       case 'info':
-        return isDark 
-          ? 'bg-blue-500/15 text-blue-400' 
+        return isDark
+          ? 'bg-blue-500/15 text-blue-400'
           : 'bg-blue-50 text-blue-600';
       case 'loading':
-        return isDark 
-          ? 'bg-slate-700/30 text-slate-400' 
+        return isDark
+          ? 'bg-slate-700/30 text-slate-400'
           : 'bg-slate-100 text-slate-600';
       case 'achievement':
-        return isDark 
-          ? 'bg-purple-500/15 text-purple-400' 
+        return isDark
+          ? 'bg-purple-500/15 text-purple-400'
           : 'bg-purple-50 text-purple-600';
       case 'sports':
-        return isDark 
-          ? 'bg-primary/15 text-primary' 
+        return isDark
+          ? 'bg-primary/15 text-primary'
           : 'bg-primary/10 text-primary';
       default:
-        return isDark 
-          ? 'bg-slate-700/30 text-slate-400' 
+        return isDark
+          ? 'bg-slate-700/30 text-slate-400'
           : 'bg-slate-100 text-slate-600';
     }
   };
@@ -299,7 +299,7 @@ const CustomToast = () => {
                   'absolute inset-0 rounded-xl blur-xl opacity-40',
                   getIconWrapperStyles(t.type, theme)
                 )} />
-                
+
                 {(() => {
                   const IconComponent = getToastIcon(t.type);
                   return (
@@ -412,7 +412,7 @@ const CustomToast = () => {
             )}
 
             {/* Gradient overlay for depth */}
-            <div 
+            <div
               className={cn(
                 'absolute inset-0 rounded-2xl pointer-events-none',
                 theme === 'dark'
@@ -427,7 +427,7 @@ const CustomToast = () => {
   );
 };
 
-// Enhanced toast methods with SportsBuddy theming
+// Enhanced toast methods with PLAYMEET theming
 export const showToast = {
   success: (message, options = {}) =>
     toast.success(message, {
@@ -461,7 +461,7 @@ export const showToast = {
       ...options,
     }),
 
-  // Special SportsBuddy-specific toast types
+  // Special PLAYMEET-specific toast types
   achievement: (message, options = {}) =>
     toast(message, {
       type: 'achievement',
@@ -527,7 +527,7 @@ export const showToast = {
       }
     ),
 
-  // SportsBuddy specific rich toasts
+  // PLAYMEET specific rich toasts
   eventJoined: (eventName, options = {}) =>
     toast(
       <div className="flex items-start gap-3">

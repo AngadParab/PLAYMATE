@@ -55,7 +55,7 @@ const CreateEventForm = () => {
 
   // Page Title
   useEffect(() => {
-    document.title = "Create Event - SportsBuddy"
+    document.title = "Create Event - PLAYMEET"
   }, [])
 
   // Calculate completion progress

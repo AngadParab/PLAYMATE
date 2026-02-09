@@ -211,7 +211,7 @@ const Athletes = () => {
 
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Find Your Perfect{' '}
-              <span className="text-primary">Sports Buddy</span>
+              <span className="text-primary">PLAYMEET</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Connect with athletes, join teams, and elevate your game. Discover talented individuals in your area who share your passion for sports.

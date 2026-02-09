@@ -38,7 +38,7 @@ const Terms = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
-    document.title = "Terms of Service - SportsBuddy"
+    document.title = "Terms of Service - PLAYMEET"
   }, [])
 
   // Handle scroll progress and active section
@@ -183,8 +183,8 @@ const Terms = () => {
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
                         className={`w-full text-left p-3 rounded-lg transition-all duration-200 group hover:scale-[1.02] hover:translate-x-0.5 active:scale-[0.98] ${isActive
-                            ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-700"
-                            : "hover:bg-gray-50 dark:hover:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                          ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-700"
+                          : "hover:bg-gray-50 dark:hover:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                           }`}
                       >
                         <div className="flex items-center gap-3">
@@ -258,7 +258,7 @@ const Terms = () => {
                         Terms of Service
                       </h1>
                       <p className="text-gray-600 dark:text-gray-400">
-                        SportsBuddy Platform Agreement
+                        PLAYMEET Platform Agreement
                       </p>
                     </div>
                   </div>
@@ -282,8 +282,8 @@ const Terms = () => {
 
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-4 border border-blue-200/50 dark:border-blue-700/50">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Welcome to SportsBuddy! These Terms of Service govern your use of our platform.
-                      By accessing or using SportsBuddy, you agree to be bound by these terms.
+                      Welcome to PLAYMEET! These Terms of Service govern your use of our platform.
+                      By accessing or using PLAYMEET, you agree to be bound by these terms.
                       Please read them carefully.
                     </p>
                   </div>
@@ -308,14 +308,14 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                      By creating an account, accessing, or using any part of SportsBuddy's services,
+                      By creating an account, accessing, or using any part of PLAYMEET's services,
                       you acknowledge that you have read, understood, and agree to be bound by these
                       Terms of Service and our Privacy Policy.
                     </p>
 
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                       If you do not agree to these terms, you must not use our services. Your continued
-                      use of SportsBuddy constitutes acceptance of any modifications to these terms.
+                      use of PLAYMEET constitutes acceptance of any modifications to these terms.
                     </p>
 
                     <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4 border border-amber-200 dark:border-amber-700/50">
@@ -354,7 +354,7 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                      SportsBuddy is a digital platform that connects sports enthusiasts, enabling them to:
+                      PLAYMEET is a digital platform that connects sports enthusiasts, enabling them to:
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -406,7 +406,7 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                      To use SportsBuddy, you must:
+                      To use PLAYMEET, you must:
                     </p>
 
                     <ul className="space-y-3 mb-6">
@@ -444,7 +444,7 @@ const Terms = () => {
                             Prohibited Users
                           </h4>
                           <p className="text-red-700 dark:text-red-300 text-sm">
-                            Users who have been previously banned, suspended, or removed from SportsBuddy
+                            Users who have been previously banned, suspended, or removed from PLAYMEET
                             are prohibited from creating new accounts.
                           </p>
                         </div>
@@ -517,7 +517,7 @@ const Terms = () => {
 
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                       You are solely responsible for all activities that occur under your account.
-                      SportsBuddy cannot and will not be liable for any loss or damage arising from
+                      PLAYMEET cannot and will not be liable for any loss or damage arising from
                       unauthorized use of your account.
                     </p>
                   </div>
@@ -542,7 +542,7 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                      You agree to use SportsBuddy responsibly and respect other users.
+                      You agree to use PLAYMEET responsibly and respect other users.
                       The following behaviors are strictly prohibited:
                     </p>
 
@@ -602,7 +602,7 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                      When posting content on SportsBuddy, you must ensure that your content:
+                      When posting content on PLAYMEET, you must ensure that your content:
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -665,7 +665,7 @@ const Terms = () => {
                             Content Ownership
                           </h4>
                           <p className="text-blue-700 dark:text-blue-300 text-sm">
-                            You retain ownership of your content, but grant SportsBuddy a license to use,
+                            You retain ownership of your content, but grant PLAYMEET a license to use,
                             display, and distribute it on our platform for the purpose of providing our services.
                           </p>
                         </div>
@@ -828,7 +828,7 @@ const Terms = () => {
                             Assumption of Risk
                           </h4>
                           <p className="text-amber-700 dark:text-amber-300 text-sm">
-                            By participating in events through SportsBuddy, you acknowledge and assume all risks
+                            By participating in events through PLAYMEET, you acknowledge and assume all risks
                             associated with physical activities, including but not limited to injury, equipment damage,
                             or other losses.
                           </p>
@@ -837,9 +837,9 @@ const Terms = () => {
                     </div>
 
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      SportsBuddy serves as a platform to connect users but is not responsible for the organization,
+                      PLAYMEET serves as a platform to connect users but is not responsible for the organization,
                       conduct, or outcomes of events. All interactions and agreements between users are independent
-                      of SportsBuddy.
+                      of PLAYMEET.
                     </p>
                   </div>
                 </section>
@@ -957,18 +957,18 @@ const Terms = () => {
                       <div className="space-y-4">
                         <h4 className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                           <Shield className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                          SportsBuddy's Rights
+                          PLAYMEET's Rights
                         </h4>
                         <div className="space-y-3">
                           <p className="text-sm text-gray-700 dark:text-gray-300">
-                            SportsBuddy owns all rights to:
+                            PLAYMEET owns all rights to:
                           </p>
                           <ul className="space-y-2 text-sm">
                             <li className="text-gray-700 dark:text-gray-300">
                               • Platform design and functionality
                             </li>
                             <li className="text-gray-700 dark:text-gray-300">
-                              • SportsBuddy branding and logos
+                              • PLAYMEET branding and logos
                             </li>
                             <li className="text-gray-700 dark:text-gray-300">
                               • Software and technology
@@ -1015,7 +1015,7 @@ const Terms = () => {
                             License Grant
                           </h4>
                           <p className="text-blue-700 dark:text-blue-300 text-sm">
-                            By posting content on SportsBuddy, you grant us a non-exclusive, worldwide,
+                            By posting content on PLAYMEET, you grant us a non-exclusive, worldwide,
                             royalty-free license to use, display, and distribute your content solely for
                             the purpose of operating and improving our platform.
                           </p>
@@ -1163,7 +1163,7 @@ const Terms = () => {
 
                   <div className="prose prose-gray dark:prose-invert max-w-none">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                      SportsBuddy reserves the right to modify these Terms of Service at any time.
+                      PLAYMEET reserves the right to modify these Terms of Service at any time.
                       We will provide notice of significant changes through appropriate channels.
                     </p>
 
@@ -1272,7 +1272,7 @@ const Terms = () => {
                             Important Legal Notice
                           </h4>
                           <p className="text-orange-700 dark:text-orange-300 leading-relaxed">
-                            SportsBuddy provides its services "as is" and makes no warranties, express or implied.
+                            PLAYMEET provides its services "as is" and makes no warranties, express or implied.
                             We are not liable for any injuries, damages, or losses that may occur during sports
                             activities or events organized through our platform.
                           </p>
@@ -1288,14 +1288,14 @@ const Terms = () => {
                       </p>
 
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                        <strong>Third-Party Interactions:</strong> SportsBuddy is not responsible for the
+                        <strong>Third-Party Interactions:</strong> PLAYMEET is not responsible for the
                         actions, content, or behavior of other users or third parties you interact with
                         through our platform.
                       </p>
 
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                         <strong>Limitation of Damages:</strong> To the maximum extent permitted by law,
-                        SportsBuddy's total liability shall not exceed the amount you paid us in the
+                        PLAYMEET's total liability shall not exceed the amount you paid us in the
                         12 months preceding the claim.
                       </p>
                     </div>
@@ -1334,8 +1334,8 @@ const Terms = () => {
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                           General inquiries and support
                         </p>
-                        <a href="mailto:legal@sportsbuddy.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                          legal@sportsbuddy.com
+                        <a href="mailto:legal@playmeet.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                          legal@playmeet.com
                         </a>
                       </div>
 
@@ -1379,7 +1379,7 @@ const Terms = () => {
                         </div>
                         <div>
                           <h3 className="font-bold text-gray-900 dark:text-white">
-                            Thank you for choosing SportsBuddy
+                            Thank you for choosing PLAYMEET
                           </h3>
                           <p className="text-sm text-gray-600 dark:text-gray-400">
                             We're committed to providing a safe and enjoyable sports community platform.
@@ -1406,7 +1406,7 @@ const Terms = () => {
 
                   <div className="text-center mt-6">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      © 2025 SportsBuddy. All rights reserved. | Version 2.0
+                      © 2025 PLAYMEET. All rights reserved. | Version 2.0
                     </p>
                   </div>
                 </div>

@@ -50,7 +50,7 @@ const Privacy = () => {
   const [activeTab, setActiveTab] = useState("platform")
 
   useEffect(() => {
-    document.title = "Privacy Policy - SportsBuddy"
+    document.title = "Privacy Policy - PLAYMEET"
   }, [])
 
   // Handle scroll progress and active section
@@ -422,7 +422,7 @@ const Privacy = () => {
 
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-4 border border-blue-200/50 dark:border-blue-700/50">
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      At SportsBuddy, we take your privacy seriously. This policy explains how we collect,
+                      At PLAYMEET, we take your privacy seriously. This policy explains how we collect,
                       use, and protect your personal information when you use our sports community platform.
                     </p>
                   </div>
@@ -456,7 +456,7 @@ const Privacy = () => {
                           <ul className="text-sm text-green-700 dark:text-green-300 space-y-1">
                             <li>• Protect your personal data with enterprise-grade security</li>
                             <li>• Give you full control over your information</li>
-                            <li>• Use data only to improve your SportsBuddy experience</li>
+                            <li>• Use data only to improve your PLAYMEET experience</li>
                             <li>• Comply with global privacy regulations (GDPR, CCPA)</li>
                           </ul>
                         </div>
@@ -700,7 +700,7 @@ const Privacy = () => {
                             We Do NOT Sell Your Data
                           </h3>
                           <p className="text-red-700 dark:text-red-300">
-                            SportsBuddy has never sold and will never sell your personal information to third parties.
+                            PLAYMEET has never sold and will never sell your personal information to third parties.
                             Your data is not a commodity – it's your property that we help you manage.
                           </p>
                         </div>
@@ -720,7 +720,7 @@ const Privacy = () => {
                           </div>
                           <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
                             <div className="font-medium text-gray-900 dark:text-white text-sm mb-1">Service Providers</div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400">With trusted partners who help us operate SportsBuddy</div>
+                            <div className="text-xs text-gray-600 dark:text-gray-400">With trusted partners who help us operate PLAYMEET</div>
                           </div>
                           <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
                             <div className="font-medium text-gray-900 dark:text-white text-sm mb-1">Legal Requirements</div>
@@ -1023,7 +1023,7 @@ const Privacy = () => {
                           Age Requirement: 13+
                         </h3>
                         <p className="text-red-700 dark:text-red-300 mb-4">
-                          SportsBuddy is designed for users 13 years and older. We do not knowingly collect
+                          PLAYMEET is designed for users 13 years and older. We do not knowingly collect
                           personal information from children under 13 without verified parental consent
                         </p>
                       </div>
@@ -1085,8 +1085,8 @@ const Privacy = () => {
                           If you believe your child under 13 has provided personal information to us,
                           please contact us immediately.
                         </p>
-                        <a href="mailto:privacy@sportsbuddy.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                          privacy@sportsbuddy.com
+                        <a href="mailto:privacy@playmeet.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                          privacy@playmeet.com
                         </a>
                       </div>
                     </div>
@@ -1170,7 +1170,7 @@ const Privacy = () => {
                         <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                           <li>All bound by strict data protection agreements</li>
                           <li>Regular compliance assessments</li>
-                          <li>Same security standards as SportsBuddy</li>
+                          <li>Same security standards as PLAYMEET</li>
                         </ul>
                       </div>
                     </div>
@@ -1239,7 +1239,7 @@ const Privacy = () => {
                         </h4>
                         <p className="text-amber-700 dark:text-amber-300 text-sm mb-3">
                           If you don't agree with significant policy changes, you can delete your account
-                          before the changes take effect. Continued use of SportsBuddy after the effective
+                          before the changes take effect. Continued use of PLAYMEET after the effective
                           date means you accept the updated policy.
                         </p>
                         <div className="flex gap-2">
@@ -1297,8 +1297,8 @@ const Privacy = () => {
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                         Privacy questions and requests
                       </p>
-                      <a href="mailto:privacy@sportsbuddy.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                        privacy@sportsbuddy.com
+                      <a href="mailto:privacy@playmeet.com" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                        privacy@playmeet.com
                       </a>
                     </div>
 
@@ -1321,7 +1321,7 @@ const Privacy = () => {
                         <h4 className="font-semibold text-gray-900 dark:text-white">Mailing Address</h4>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        SportsBuddy Privacy Team<br />
+                        PLAYMEET Privacy Team<br />
                         123 Privacy Avenue<br />
                         Ahmedabad, Gujarat 380001
                       </p>
@@ -1366,7 +1366,7 @@ const Privacy = () => {
 
                   <div className="text-center mt-6">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      © 2025 SportsBuddy. All rights reserved. | Privacy Policy v3.1
+                      © 2025 PLAYMEET. All rights reserved. | Privacy Policy v3.1
                     </p>
                   </div>
                 </div>

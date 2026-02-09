@@ -120,7 +120,7 @@ const GlobalSearch = () => {
                     {/* Header & Search Input */}
                     <div className="text-center space-y-6">
                         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                            Search <span className="text-primary">SportsBuddy</span>
+                            Search <span className="text-primary">PLAYMEET</span>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Find events, venues, and athletes across the platform.

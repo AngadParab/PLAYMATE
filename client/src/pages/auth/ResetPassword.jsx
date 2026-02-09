@@ -156,8 +156,8 @@ const ResetPassword = () => {
             <div className="flex items-center justify-center space-x-4 mt-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
               <div className="flex items-center space-x-2">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-300 ${step === 1
-                    ? 'bg-blue-600 text-white dark:bg-blue-500 dark:text-white'
-                    : 'bg-green-600 text-white'
+                  ? 'bg-blue-600 text-white dark:bg-blue-500 dark:text-white'
+                  : 'bg-green-600 text-white'
                   }`}>
                   {step === 1 ? '1' : <CheckCircle className="w-4 h-4" />}
                 </div>
@@ -166,8 +166,8 @@ const ResetPassword = () => {
               <div className={`h-0.5 w-8 transition-colors duration-300 ${step === 2 ? 'bg-green-600' : 'bg-slate-200 dark:bg-slate-700'}`} />
               <div className="flex items-center space-x-2">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-300 ${step === 2
-                    ? 'bg-blue-600 text-white dark:bg-blue-500 dark:text-white'
-                    : 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                  ? 'bg-blue-600 text-white dark:bg-blue-500 dark:text-white'
+                  : 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
                   }`}>
                   2
                 </div>
@@ -430,13 +430,13 @@ const ResetPassword = () => {
           </CardContent>
         </Card>
 
-        {/* SportsBuddy Branding */}
+        {/* PLAYMEET Branding */}
         <div
           className="text-center mt-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500"
         >
           <div className="flex items-center justify-center space-x-2 mb-2">
             <Trophy className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            <span className="font-bold text-lg text-slate-900 dark:text-slate-50">SportsBuddy</span>
+            <span className="font-bold text-lg text-slate-900 dark:text-slate-50">PLAYMEET</span>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             Secure password reset for your sports community

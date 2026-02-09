@@ -43,7 +43,7 @@ const EventCreateForm = ({ activeTab, setActiveTab, form, completionProgress, se
 
     // Page Title
     useEffect(() => {
-        document.title = "Create Event - SportsBuddy"
+        document.title = "Create Event - PLAYMEET"
     }, [])
 
     // Calculate completion progress
