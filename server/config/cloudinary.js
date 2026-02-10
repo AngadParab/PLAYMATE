@@ -1,5 +1,7 @@
-﻿import { v2 as cloudinary } from 'cloudinary';
-import { CloudinaryStorage } from 'multer-storage-cloudinary';
+﻿// @ts-nocheck
+
+import cloudinary from 'cloudinary';
+import CloudinaryStorage from 'multer-storage-cloudinary';
 import multer from 'multer';
 import dotenv from 'dotenv';
 
@@ -11,7 +13,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const storage = new CloudinaryStorage({
+const storage = CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'PLAYMEET-2',
