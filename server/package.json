@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
@@ -41,7 +41,7 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.11"
   }
 }
 
